@@ -18,11 +18,14 @@ architecture traba_1_vlsi_top of traba_1_vlsi_top is
 
     signal btn_n_sync: std_logic;
     signal reset: std_logic;
-    signal btn_sync: std_logic;
+
+    signal btn1_sync: std_logic;
     signal btn2_sync: std_logic;
     signal btn3_sync: std_logic;
+
     signal led: std_logic_vector(3 downto 0);
-    signal btn_deb : std_logic;
+
+    signal btn1_deb : std_logic;
     signal btn2_deb : std_logic;
     signal btn3_deb : std_logic;
 
@@ -53,15 +56,20 @@ begin
         when "1110" => div <= "00000001001110001000"   
         when "1111" => div <= "00000000010011100010" 
     end case;
+begin 
+        process(clock)
+        begin 
+            if btn2_deb = '1' then 
+                en = '1';
+            elsif btn3_deb = '1' then
+                bruzzer_en ='0';
+            end if;
+        end process;
+
 begin
     reset <= not reset_n;
     btn_sync <= not btn_n_sync;
     led_n <= not led;
-
-    ver <= '0' when led = "1111" else
-        btn_deb;
-    
-    buzz <= 1 when btn2 = '1';
     
     synchro_btn : entity work.synchro
     port map(
@@ -74,33 +82,33 @@ begin
     port map(
         clock => clock,
         reset => reset,
-        btn => btn_sync,
-        btn2 => btn2_sync,
-        btn3 => btn3_sync,
+        btn => btn_deb,
+        btn2 => btn2_deb,
+        btn3 => btn3_deb,
         led => led
     );
 
-    debounce : entity work.debounce
+    debounce_1 : entity work.debounce
     port map(
         clock => clock,
         reset => reset,
-        bounce_i => btn_sync,
-        debounce_o => btn_deb
+        bounce_i => btn1_sync,
+        debounce_o => btn1_deb
     );
 
-    debounce : entity work.debounce
+    debounce_2 : entity work.debounce
     port map(
         clock => clock,
         reset => reset,
-        bounce_i => btn_sync,
+        bounce_i => btn2_sync,
         debounce_o => btn2_deb
     );
 
-    debounce : entity work.debounce
+    debounce_3 : entity work.debounce
     port map(
         clock => clock,
         reset => reset,
-        bounce_i => btn_sync,
+        bounce_i => btn3_sync,
         debounce_o => btn3_deb
     );
 
@@ -109,7 +117,8 @@ begin
         clock => clock,
         reset => reset,
         en => buzzer_en,
-        buzz => buzzer_o
+        buzz => buzzer_o,
+        in_div => div
     );
 
 end architecture;
