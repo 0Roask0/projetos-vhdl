@@ -5,9 +5,9 @@ use ieee.std_logic_unsigned.all;
 entity buzzer is
     port(
         clock : in std_logic;
-        reset : is std_logic;
+        reset : in std_logic;
 
-        in_div : in std_logic;
+        in_div : in std_logic_vector(20 downto 0);
         en : in std_logic;
         buzz : out std_logic
     );
@@ -24,10 +24,9 @@ begin
         if reset = '1' then
             cnt <= (others => '0');
         elsif rising_edge(clock) then
-            if cnt /= in_div then
+            cnt <= cnt + '1'; 
+            if cnt = in_div then
                 cnt <= (others => '0');
-            else 
-                cnt <= cnt + '1'; 
             end if;              
         end if;
     end process;

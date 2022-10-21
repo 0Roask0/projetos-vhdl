@@ -1,5 +1,5 @@
-Flow report for Traba_1_vlsi_top
-Thu Oct 20 16:06:59 2022
+Flow report for traba_1_vlsi_top
+Fri Oct 21 19:18:26 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,24 +38,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Oct 20 16:06:59 2022      ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; Traba_1_vlsi_top                            ;
-; Top-level Entity Name       ; Traba_1_vlsi_top                            ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CEBA2F17C8                                 ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Fri Oct 21 19:18:22 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; traba_1_vlsi_top                            ;
+; Top-level Entity Name              ; traba_1_vlsi_top                            ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
+;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
+;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 10 / 92 ( 11 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,9 +65,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/20/2022 16:06:47 ;
+; Start date & time ; 10/21/2022 19:17:57 ;
 ; Main task         ; Compilation         ;
-; Revision Name     ; Traba_1_vlsi_top    ;
+; Revision Name     ; traba_1_vlsi_top    ;
 +-------------------+---------------------+
 
 
@@ -74,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 247207025730826.166629280712704        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 247207025730826.166639067605232        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -89,8 +91,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4827 MB             ; 00:00:28                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4782 MB             ; 00:00:39                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5775 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4793 MB             ; 00:00:02                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -100,13 +105,19 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-3PAKPFA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-3PAKPFA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-3PAKPFA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-3PAKPFA  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Traba_1_vlsi -c Traba_1_vlsi_top
+quartus_map --read_settings_files=on --write_settings_files=off traba_1_vlsi -c traba_1_vlsi_top
+quartus_fit --read_settings_files=off --write_settings_files=off traba_1_vlsi -c traba_1_vlsi_top
+quartus_asm --read_settings_files=off --write_settings_files=off traba_1_vlsi -c traba_1_vlsi_top
+quartus_sta traba_1_vlsi -c traba_1_vlsi_top
 
 
 

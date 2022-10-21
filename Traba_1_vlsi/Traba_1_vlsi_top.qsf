@@ -19,14 +19,14 @@
 #
 # Quartus Prime
 # Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-# Date created = 16:05:40  October 20, 2022
+# Date created = 00:21:13  October 21, 2022
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Traba_1_vlsi_top_assignment_defaults.qdf
+#		traba_1_vlsi_top_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -37,11 +37,11 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CEBA2F17C8
-set_global_assignment -name TOP_LEVEL_ENTITY Traba_1_vlsi_top
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY traba_1_vlsi_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:05:40  OCTOBER 20, 2022"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:21:13  OCTOBER 21, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VHDL_FILE traba_1_vlsi_top.vhd
 set_global_assignment -name VHDL_FILE traba_1_vlsi.vhd
@@ -55,4 +55,14 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_25 -to reset_n
+set_location_assignment PIN_84 -to led_n[0]
+set_location_assignment PIN_85 -to led_n[1]
+set_location_assignment PIN_86 -to led_n[2]
+set_location_assignment PIN_23 -to clock
+set_location_assignment PIN_90 -to btn3_n
+set_location_assignment PIN_87 -to led_n[3]
+set_location_assignment PIN_89 -to btn2_n
+set_location_assignment PIN_88 -to btn1_n
+set_location_assignment PIN_110 -to buzzer_o
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
