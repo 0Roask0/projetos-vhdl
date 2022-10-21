@@ -7,7 +7,7 @@ entity buzzer is
         clock : in std_logic;
         reset : is std_logic;
 
-        in_div : in std_logic;
+        in_div : in std_logic_vector( 20 downto 0 );;
         en : in std_logic;
         buzz : out std_logic
     );
