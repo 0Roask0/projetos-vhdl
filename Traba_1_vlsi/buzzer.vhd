@@ -24,7 +24,7 @@ begin
         if reset = '1' then
             cnt <= (others => '0');
         elsif rising_edge(clock) then
-            if cnt /= in_div then
+            if cnt = in_div then
                 cnt <= (others => '0');
             else 
                 cnt <= cnt + '1'; 
