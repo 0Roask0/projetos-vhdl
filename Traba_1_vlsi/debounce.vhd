@@ -19,7 +19,7 @@ architecture debounce of debounce is
     signal state : std_logic;
 
 begin
-
+    debounce_o <= state;
     process(clock, reset)
     begin
         if reset = '1' then 
