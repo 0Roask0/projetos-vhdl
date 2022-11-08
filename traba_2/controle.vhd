@@ -52,11 +52,13 @@ begin
                 
                 when apita =>
                     if prime_o = '0' and cnt = "1011111010111100001000000" and disparou = '0' then
+                        buzzer_en <= '1';
                         FSM <= espera;
                     else
                         cnt <= cnt + '1';
                     end if;
                     if prime_o = '0' and cnt = "1011111010111100001000000" and disparou = '1' then
+                        buzzer_en <= '1';
                         FSM <= fim;
 
                     elsif prime_o = '1' and cnt = "1011111010111100001000000" then
