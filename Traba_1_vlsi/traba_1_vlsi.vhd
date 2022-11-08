@@ -8,6 +8,7 @@ entity traba_1_vlsi is
         reset: in std_logic;
 
         btn1: in std_logic;
+
         led: out std_logic_vector(3 downto 0)
 
     );
@@ -27,7 +28,6 @@ begin
             cnt <= (others => '0');
             pressed <= '0';
         elsif rising_edge(clock) then
-
             if btn1 = '1' and pressed = '0' then
                 cnt <= cnt +'1';
                 pressed<= '1';

@@ -30,6 +30,7 @@ begin
             end if;              
         end if;
     end process;
+    
     process (clock, reset)
     begin
         if reset = '1' then

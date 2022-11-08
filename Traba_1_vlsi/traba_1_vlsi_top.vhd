@@ -10,8 +10,12 @@ entity traba_1_vlsi_top is
         btn1_n: in std_logic;
         btn2_n: in std_logic;
         btn3_n: in std_logic;
+
+        para : in std_logic;
+
         led_n: out std_logic_vector(3 downto 0);
         buzzer_o: out std_logic
+        
 
     );
 
@@ -19,7 +23,10 @@ end traba_1_vlsi_top;
 
 architecture traba_1_vlsi_top of traba_1_vlsi_top is
 
-    signal btn_n_sync: std_logic;
+    signal btn1_n_sync: std_logic;
+    signal btn2_n_sync: std_logic;
+    signal btn3_n_sync: std_logic;
+    
     signal reset: std_logic;
 
     signal btn1_sync: std_logic;
@@ -33,6 +40,7 @@ architecture traba_1_vlsi_top of traba_1_vlsi_top is
     signal btn3_deb : std_logic;
 
     signal buzzer_en : std_logic;
+
 
     signal cnt : std_logic_vector(3 downto 0);
     signal div : std_logic_vector(20 downto 0);
@@ -63,7 +71,14 @@ begin
         end case;
     end process;
 
- 
+    reset <= not reset_n;
+    btn1_sync <= not btn1_n_sync;
+    btn2_sync <= not btn2_n_sync;
+    btn3_sync <= not btn3_n_sync;
+    led_n <= not led;
+
+
+
     process(clock, reset)
         begin 
             if reset ='1' then 
@@ -77,30 +92,26 @@ begin
                 end if;
             end if;
     end process;
-
-    reset <= not reset_n;
-    btn1_sync <= not btn_n_sync;
-    led_n <= not led;
     
     synchro1_btn : entity work.synchro
     port map(
         clock => clock,
         async_i => btn1_n,
-        sync_o => btn_n_sync
+        sync_o => btn1_n_sync
     );
 
     synchro2_btn : entity work.synchro
     port map(
         clock => clock,
         async_i => btn2_n,
-        sync_o => btn_n_sync
+        sync_o => btn2_n_sync
     );
 
     synchro3_btn : entity work.synchro
     port map(
         clock => clock,
         async_i => btn3_n,
-        sync_o => btn_n_sync
+        sync_o => btn3_n_sync
     );
 
     traba_1_vlsi : entity work.traba_1_vlsi

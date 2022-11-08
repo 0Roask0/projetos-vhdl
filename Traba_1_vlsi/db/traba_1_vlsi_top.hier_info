@@ -17,11 +17,12 @@ reset_n => buzzer:buzzer.reset
 btn1_n => synchro:synchro1_btn.async_i
 btn2_n => synchro:synchro2_btn.async_i
 btn3_n => synchro:synchro3_btn.async_i
-led_n[0] << traba_1_vlsi:traba_1_vlsi.led[0]
-led_n[1] << traba_1_vlsi:traba_1_vlsi.led[1]
-led_n[2] << traba_1_vlsi:traba_1_vlsi.led[2]
-led_n[3] << traba_1_vlsi:traba_1_vlsi.led[3]
-buzzer_o << buzzer:buzzer.buzz
+para => ~NO_FANOUT~
+led_n[0] <= traba_1_vlsi:traba_1_vlsi.led[0]
+led_n[1] <= traba_1_vlsi:traba_1_vlsi.led[1]
+led_n[2] <= traba_1_vlsi:traba_1_vlsi.led[2]
+led_n[3] <= traba_1_vlsi:traba_1_vlsi.led[3]
+buzzer_o <= buzzer:buzzer.buzz
 
 
 |traba_1_vlsi_top|synchro:synchro1_btn
