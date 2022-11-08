@@ -7,12 +7,7 @@ use ieee.numeric_std.all;
 entity controle is
     port(
         clock : in std_logic;
-        reset : in std_logic;
- 
-        buzzer_en : in std_logic;
-        buzzer_o : out std_logic
-
-        
+        reset : in std_logic
     );
 end entity;
 
@@ -25,6 +20,8 @@ architecture controle of controle is
     signal div : std_logic_vector(20 downto 0);
     signal led :  std_logic_vector(3 downto 0);
 
+    signal buzzer_en : std_logic;
+    signal buzzer_o :  std_logic;
     signal disparou : std_logic;
     signal prime_o : std_logic;
     signal valid_o : std_logic;

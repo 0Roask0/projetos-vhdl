@@ -1,5 +1,7 @@
 |traba_2_top
 clock => synchro:synchro1_btn.clock
+clock => blockbtn2.CLK
+clock => blockbtn1.CLK
 clock => en_i.CLK
 clock => pressed.CLK
 clock => led[0].CLK
@@ -26,6 +28,8 @@ reset_n => debounce:debounce_2.reset
 reset_n => debounce:debounce_3.reset
 reset_n => buzzer:buzzer.reset
 reset_n => controle:controle.reset
+reset_n => blockbtn2.ENA
+reset_n => blockbtn1.ENA
 btn1_n => synchro:synchro1_btn.async_i
 btn2_n => synchro:synchro2_btn.async_i
 btn3_n => synchro:synchro3_btn.async_i
@@ -353,12 +357,14 @@ clock => cnt[21].CLK
 clock => cnt[22].CLK
 clock => cnt[23].CLK
 clock => cnt[24].CLK
+clock => buzzer_en.CLK
 clock => buzzer:buzzer.clock
 clock => FSM~5.DATAIN
 reset => traba_2:traba_2.reset
 reset => buzzer:buzzer.reset
 reset => FSM~7.DATAIN
 reset => disparou.ENA
+reset => buzzer_en.ENA
 reset => cnt[24].ENA
 reset => cnt[23].ENA
 reset => cnt[22].ENA
@@ -384,8 +390,6 @@ reset => cnt[3].ENA
 reset => cnt[2].ENA
 reset => cnt[1].ENA
 reset => cnt[0].ENA
-buzzer_en => buzzer:buzzer.en
-buzzer_o <= buzzer:buzzer.buzz
 
 
 |traba_2_top|controle:controle|traba_2:traba_2

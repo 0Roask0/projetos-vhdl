@@ -91,6 +91,20 @@ begin
             elsif btn3_deb = '0' and pressed = '1' then
                 pressed <= '0';
             end if;
+
+            if btn3_deb = '1' and pressed = '1' then
+                blockbtn1 <= '1';
+                blockbtn2 <= '1';
+            else
+                pressed <= '0';
+            end if;
+
+            if blockbtn1 = '1' and blockbtn2 = '1' then
+                led <= (others => '0');
+            else
+                blockbtn1 <= '0';
+                blockbtn2 <= '0';
+            end if;
         end if;  
     end process;
 
@@ -162,8 +176,6 @@ begin
     controle : entity work.controle
     port map(
         clock => clock,
-        reset => reset,
-        buzzer_en => buzzer_control,
-        buzzer_o => buzzer_control_o
+        reset => reset
     );
 end architecture;

@@ -34,10 +34,6 @@
 				{
 					"name" : "btn2_n",
 					"strict" : false
-				},
-				{
-					"name" : "btn3_n",
-					"strict" : false
 				}
 			]
 		}
