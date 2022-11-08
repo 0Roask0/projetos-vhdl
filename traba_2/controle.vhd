@@ -25,6 +25,7 @@ architecture traba_1 of traba_1 is
     signal buzzer_en : std_logic;
     signal div : std_logic_vector(20 downto 0);
 
+    signal disparou : std_logic;
     signal prime_o : std_logic;
     signal valid_o : std_logic;
     signal en_i : std_logic;
@@ -43,9 +44,45 @@ begin
             
             case FSM is
                 when aguard =>
-                    if
-        
-       
+                    if valid_o = '0' then
+                        FSM <= aguard;
+                        prime_o <= '0';
+                    else 
+                        --buzzer_en <= '1';
+                        -- disparou <= '1';
+                        FSM <= apita;
+                    end if;
+                
+                when apita =>
+                    if primo_o = '0' and cnt = "25000000" and disparou = '0' then
+                        buzzer_en <= '1';
+                        FSM <= espera;
+                    else
+                        cnt <= cnt + '1';
+                    end if;
+                    if primo_o = '0' and cnt = "25000000" and disparou = '1' then
+                        FSM <= fim;
+
+                    elsif primo_o = '1' and cnt = "25000000"
+                        FSM <= fim;
+                    end if;
+                
+                when espera =>
+                    if cnt = "25000000" then
+                        disparou <= '1';
+                        FSM <= apita;
+                    else
+                        cnt <= cnt + '1';
+                    end if;
+
+                when fim =>
+                    if valid_o = '0' then
+                        FSM <= aguard;
+                    else 
+                        FSM <= apita;
+                    end if;
+            end case;
+        end if;  
     end process;
 
     traba_2 : entity work.traba_2

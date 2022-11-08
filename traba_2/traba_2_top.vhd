@@ -47,8 +47,7 @@ architecture traba_1 of traba_1 is
     signal blockbtn2 : std_logic;
     signal blockbtn3 : std_logic;
 
-
-    signal cnt : std_logic_vector(3 downto 0);
+    signal pressed : std_logic;
     signal div : std_logic_vector(20 downto 0);
     signal num: std_logic_vector(3 downto 0);
 
@@ -60,10 +59,64 @@ begin
     btn3_sync <= not btn3_n_sync;
     led_n <= not led;
 
+    process(clock)
+    begin
+        if btn3_deb = '1'  and valid_o = '0' then
+            blockbtn1 <= '1';
+            blockbtn2 <= '1';
+            blockbtn3 <= '1';
+            
+        elsif blockbtn1 = '1' and blockbtn2 = '1' and blockbtn3 = '1'then
+            btn1_deb <= '0';
+            btn2_deb <= '0';
+           -- btn3_deb <= '0';
+        end if; 
+    end process;
+
+
     process(clock, reset)
     begin
+        if reset = '1' then 
+            led <= (others => '0');
+            pressed <= '0';
+        elsif rising_edge(clock) then
+            if btn1_deb = '1' and pressed = '0' then
+                led <= led + '1';
+                pressed<= '1';
+            elsif btn = '0' and pressed = '1' then
+                pressed <= '0';
+            end if;
+        end if;  
+    end process;
 
-        
+    process(clock, reset)
+    begin
+        if reset = '1' then 
+            led <= (others => '0');
+            pressed <= '0';
+        elsif rising_edge(clock) then
+            if btn2_deb = '1' and pressed = '0' then
+                led <= led - '1';
+                pressed<= '1';
+            elsif btn2_deb = '0' and pressed = '1' then
+                pressed <= '0';
+            end if;
+        end if;  
+    end process;
+
+    process(clock, reset)
+    begin
+        if reset = '1' then 
+            en_i <= '0';
+            pressed <= '0';
+        elsif rising_edge(clock) then
+            if btn3_deb = '1' and pressed = '0' then
+                en_i <= '1';
+                pressed<= '1';
+            elsif btn3_deb = '0' and pressed = '1' then
+                pressed <= '0';
+            end if;
+        end if;  
     end process;
     
     synchro1_btn : entity work.synchro
