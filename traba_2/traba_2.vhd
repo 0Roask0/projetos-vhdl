@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 
-entity traba_1 is
+entity traba_2 is
     port(
         clock : in std_logic;
         reset : in std_logic;
@@ -18,7 +18,7 @@ entity traba_1 is
 end entity;
 
 
-architecture traba_1 of traba_1 is
+architecture traba_2 of traba_2 is
 
     type stateFSM is (aguard, calc);
     signal FSM : stateFSM;

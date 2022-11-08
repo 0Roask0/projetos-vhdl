@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 
-entity traba_1_top is
+entity traba_2_top is
     port(
         clock: in std_logic;
         reset_n: in std_logic;
@@ -19,7 +19,7 @@ entity traba_1_top is
 end entity;
 
 
-architecture traba_1 of traba_1 is
+architecture traba_2_top of traba_2_top is
 
     signal btn1_n_sync: std_logic;
     signal btn2_n_sync: std_logic;
@@ -42,6 +42,8 @@ architecture traba_1 of traba_1 is
     signal prime_o : std_logic;
     signal valid_o : std_logic;
     signal en_i : std_logic;
+    signal buzzer_control : std_logic;
+    signal buzzer_control_o : std_logic;
 
     signal blockbtn1 : std_logic;
     signal blockbtn2 : std_logic;
@@ -59,19 +61,7 @@ begin
     btn3_sync <= not btn3_n_sync;
     led_n <= not led;
 
-    process(clock)
-    begin
-        if btn3_deb = '1'  and valid_o = '0' then
-            blockbtn1 <= '1';
-            blockbtn2 <= '1';
-            blockbtn3 <= '1';
-            
-        elsif blockbtn1 = '1' and blockbtn2 = '1' and blockbtn3 = '1'then
-            btn1_deb <= '0';
-            btn2_deb <= '0';
-           -- btn3_deb <= '0';
-        end if; 
-    end process;
+   
 
 
     process(clock, reset)
@@ -79,37 +69,22 @@ begin
         if reset = '1' then 
             led <= (others => '0');
             pressed <= '0';
+            en_i <= '0';
         elsif rising_edge(clock) then
             if btn1_deb = '1' and pressed = '0' then
                 led <= led + '1';
                 pressed<= '1';
-            elsif btn = '0' and pressed = '1' then
+            elsif btn1_deb = '0' and pressed = '1' then
                 pressed <= '0';
             end if;
-        end if;  
-    end process;
 
-    process(clock, reset)
-    begin
-        if reset = '1' then 
-            led <= (others => '0');
-            pressed <= '0';
-        elsif rising_edge(clock) then
             if btn2_deb = '1' and pressed = '0' then
                 led <= led - '1';
                 pressed<= '1';
             elsif btn2_deb = '0' and pressed = '1' then
                 pressed <= '0';
             end if;
-        end if;  
-    end process;
 
-    process(clock, reset)
-    begin
-        if reset = '1' then 
-            en_i <= '0';
-            pressed <= '0';
-        elsif rising_edge(clock) then
             if btn3_deb = '1' and pressed = '0' then
                 en_i <= '1';
                 pressed<= '1';
@@ -118,6 +93,8 @@ begin
             end if;
         end if;  
     end process;
+
+   
     
     synchro1_btn : entity work.synchro
     port map(
@@ -146,7 +123,7 @@ begin
         reset => reset,
         data_i => led,
         en_i => en_i,
-        prime_o => prime_o
+        prime_o => prime_o,
         valid_o => valid_o
     );
 
@@ -181,5 +158,12 @@ begin
         en => buzzer_en,
         buzz => buzzer_o,
         in_div => div
+    );
+    controle : entity work.controle
+    port map(
+        clock => clock,
+        reset => reset,
+        buzzer_en => buzzer_control,
+        buzzer_o => buzzer_control_o
     );
 end architecture;
