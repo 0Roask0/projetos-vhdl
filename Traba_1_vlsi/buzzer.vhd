@@ -7,7 +7,11 @@ entity buzzer is
         clock : in std_logic;
         reset : in std_logic;
 
+<<<<<<< HEAD
         in_div : in std_logic_vector(20 downto 0);
+=======
+        in_div : in std_logic_vector( 20 downto 0 );
+>>>>>>> 9ad4defd56f91981c7029ce2d69e79c952d70196
         en : in std_logic;
         buzz : out std_logic
     );
@@ -24,7 +28,10 @@ begin
         if reset = '1' then
             cnt <= (others => '0');
         elsif rising_edge(clock) then
+<<<<<<< HEAD
             cnt <= cnt + '1'; 
+=======
+>>>>>>> 9ad4defd56f91981c7029ce2d69e79c952d70196
             if cnt = in_div then
                 cnt <= (others => '0');
             end if;              

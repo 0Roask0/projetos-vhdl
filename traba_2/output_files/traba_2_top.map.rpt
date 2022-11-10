@@ -1,0 +1,415 @@
+Analysis & Synthesis report for traba_2_top
+Thu Nov 10 01:09:46 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |traba_2_top|controle:controle|FSM
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "buzzer:buzzer"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 10 01:09:46 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; traba_2_top                                 ;
+; Top-level Entity Name              ; traba_2_top                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 108                                         ;
+;     Total combinational functions  ; 102                                         ;
+;     Dedicated logic registers      ; 80                                          ;
+; Total registers                    ; 80                                          ;
+; Total pins                         ; 9                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; traba_2_top        ; traba_2_top        ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; traba_2_top.vhd                  ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd ;         ;
+; traba_2.vhd                      ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2.vhd     ;         ;
+; synchro.vhd                      ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/synchro.vhd     ;         ;
+; debounce.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/debounce.vhd    ;         ;
+; controle.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/controle.vhd    ;         ;
+; buzzer.vhd                       ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/buzzer.vhd      ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 108         ;
+;                                             ;             ;
+; Total combinational functions               ; 102         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 23          ;
+;     -- 3 input functions                    ; 6           ;
+;     -- <=2 input functions                  ; 73          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 36          ;
+;     -- arithmetic mode                      ; 66          ;
+;                                             ;             ;
+; Total registers                             ; 80          ;
+;     -- Dedicated logic registers            ; 80          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 9           ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 80          ;
+; Total fan-out                               ; 633         ;
+; Average fan-out                             ; 3.17        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; |traba_2_top               ; 102 (9)             ; 80 (5)                    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |traba_2_top                      ; traba_2_top ; work         ;
+;    |debounce:debounce_1|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_1  ; debounce    ; work         ;
+;    |debounce:debounce_2|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_2  ; debounce    ; work         ;
+;    |debounce:debounce_3|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_3  ; debounce    ; work         ;
+;    |synchro:synchro1_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro1_btn ; synchro     ; work         ;
+;    |synchro:synchro2_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro2_btn ; synchro     ; work         ;
+;    |synchro:synchro3_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro3_btn ; synchro     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |traba_2_top|controle:controle|FSM         ;
++------------+---------+------------+-----------+------------+
+; Name       ; FSM.fim ; FSM.espera ; FSM.apita ; FSM.aguard ;
++------------+---------+------------+-----------+------------+
+; FSM.aguard ; 0       ; 0          ; 0         ; 0          ;
+; FSM.apita  ; 0       ; 0          ; 1         ; 1          ;
+; FSM.espera ; 0       ; 1          ; 0         ; 1          ;
+; FSM.fim    ; 1       ; 0          ; 0         ; 1          ;
++------------+---------+------------+-----------+------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; en_i                                   ; Stuck at VCC due to stuck port data_in ;
+; controle:controle|disparou             ; Stuck at VCC due to stuck port data_in ;
+; traba_2:traba_2|prime_o                ; Lost fanout                            ;
+; traba_2:traba_2|valid_o                ; Lost fanout                            ;
+; controle:controle|cnt[0..24]           ; Lost fanout                            ;
+; traba_2:traba_2|FSM                    ; Lost fanout                            ;
+; traba_2:traba_2|num[0..3]              ; Lost fanout                            ;
+; traba_2:traba_2|cnt[0..3]              ; Lost fanout                            ;
+; controle:controle|FSM.aguard           ; Lost fanout                            ;
+; controle:controle|FSM.apita            ; Lost fanout                            ;
+; controle:controle|FSM.espera           ; Lost fanout                            ;
+; controle:controle|FSM.fim              ; Lost fanout                            ;
+; Total Number of Removed Registers = 42 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++----------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++----------------------------+---------------------------+----------------------------------------------------------------------------------+
+; controle:controle|cnt[24]  ; Lost Fanouts              ; controle:controle|cnt[23], controle:controle|cnt[22], controle:controle|cnt[21], ;
+;                            ;                           ; controle:controle|cnt[20], controle:controle|cnt[19], controle:controle|cnt[18], ;
+;                            ;                           ; controle:controle|cnt[17], controle:controle|cnt[16], controle:controle|cnt[15], ;
+;                            ;                           ; controle:controle|cnt[14], controle:controle|cnt[13], controle:controle|cnt[12], ;
+;                            ;                           ; controle:controle|cnt[11], controle:controle|cnt[10], controle:controle|cnt[9],  ;
+;                            ;                           ; controle:controle|cnt[8], controle:controle|cnt[7], controle:controle|cnt[6],    ;
+;                            ;                           ; controle:controle|cnt[5], controle:controle|cnt[4], controle:controle|cnt[3],    ;
+;                            ;                           ; controle:controle|cnt[2], controle:controle|cnt[1], controle:controle|cnt[0],    ;
+;                            ;                           ; controle:controle|FSM.aguard, controle:controle|FSM.apita,                       ;
+;                            ;                           ; controle:controle|FSM.espera, controle:controle|FSM.fim                          ;
+; controle:controle|disparou ; Stuck at VCC              ; traba_2:traba_2|prime_o, traba_2:traba_2|valid_o, traba_2:traba_2|FSM,           ;
+;                            ; due to stuck port data_in ; traba_2:traba_2|cnt[3], traba_2:traba_2|cnt[2], traba_2:traba_2|cnt[1],          ;
+;                            ;                           ; traba_2:traba_2|cnt[0]                                                           ;
+; en_i                       ; Stuck at VCC              ; traba_2:traba_2|num[3], traba_2:traba_2|num[2], traba_2:traba_2|num[1],          ;
+;                            ; due to stuck port data_in ; traba_2:traba_2|num[0]                                                           ;
++----------------------------+---------------------------+----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 80    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 66    ;
+; Number of registers using Asynchronous Clear ; 74    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |traba_2_top|traba_2:traba_2|cnt[3]        ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |traba_2_top|traba_2:traba_2|valid_o       ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_2|timer[10] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_1|timer[2]  ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_3|timer[1]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |traba_2_top|led[3]                        ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |traba_2_top|controle:controle|cnt[21]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "buzzer:buzzer"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; buzz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 9                           ;
+; cycloneiii_ff         ; 80                          ;
+;     CLR               ; 5                           ;
+;     CLR SLD           ; 66                          ;
+;     ENA CLR           ; 3                           ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 106                         ;
+;     arith             ; 66                          ;
+;         2 data inputs ; 64                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 40                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 23                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.74                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 10 01:09:32 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traba_2 -c traba_2_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file traba_2_top.vhd
+    Info (12022): Found design unit 1: traba_2_top-traba_2_top File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 21
+    Info (12023): Found entity 1: traba_2_top File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file traba_2.vhd
+    Info (12022): Found design unit 1: traba_2-traba_2 File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2.vhd Line: 21
+    Info (12023): Found entity 1: traba_2 File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file synchro.vhd
+    Info (12022): Found design unit 1: synchro-synchro File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/synchro.vhd Line: 16
+    Info (12023): Found entity 1: synchro File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/synchro.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: debounce-debounce File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/debounce.vhd Line: 16
+    Info (12023): Found entity 1: debounce File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/debounce.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
+    Info (12022): Found design unit 1: controle-controle File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/controle.vhd Line: 21
+    Info (12023): Found entity 1: controle File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/controle.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file buzzer.vhd
+    Info (12022): Found design unit 1: buzzer-buzzer File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/buzzer.vhd Line: 16
+    Info (12023): Found entity 1: buzzer File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/buzzer.vhd Line: 5
+Info (12127): Elaborating entity "traba_2_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at traba_2_top.vhd(40): object "buzzer_o" assigned a value but never read File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 40
+Warning (10541): VHDL Signal Declaration warning at traba_2_top.vhd(51): used implicit default value for signal "div" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 51
+Info (12128): Elaborating entity "synchro" for hierarchy "synchro:synchro1_btn" File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 97
+Info (12128): Elaborating entity "traba_2" for hierarchy "traba_2:traba_2" File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 118
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:debounce_1" File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 128
+Info (12128): Elaborating entity "buzzer" for hierarchy "buzzer:buzzer" File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 152
+Info (12128): Elaborating entity "controle" for hierarchy "controle:controle" File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/traba_2_top.vhd Line: 160
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 40 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 108 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Thu Nov 10 01:09:46 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
+
+
