@@ -7,8 +7,6 @@ entity traba_2_vlsi_top is
         clock: in std_logic;
         reset_n: in std_logic;
 
-        ir		: in std_logic;
-
         btn_n: in std_logic;
         led_n: out std_logic_vector(3 downto 0)
 
@@ -32,13 +30,14 @@ architecture traba_2_vlsi_top of traba_2_vlsi_top is
     signal btn3_deb : std_logic;
 
     signal buzzer_en : std_logic;
-	 signal buzzer_o : std_logic;
     signal ver : std_logic;
 
-    signal cnt : std_logic_vector(3 downto 0);
+    signal cnt : std_logic_vector(15 downto 0);
     signal div : std_logic_vector(20 downto 0);
+    signal reset : std_logic;
 	signal ir_sync : std_logic;
 	signal intr : std_logic;
+	signal led : std_logic_vector(3 downto 0);
 	signal dig : std_logic_vector(3 downto 0);
 	signal command : std_logic_vector(7 downto 0);
 	signal acionou : std_logic;
@@ -92,14 +91,14 @@ begin
 		end if;
 
 		if command = X"C2" then
-			buzzer_en <= '1';
+			buzz_en <= '1';
 			acionou <= '1';
 		elsif command = X"C2" and acionou = '1' then
-			buzzer_en <= '1';
+			buzz_en <= '1';
             acionou <= '0';
 		end if;
 
-		if command = X"E0" then
+		if commmand = X"E0" then
 			dig <= dig - '1';
 		elsif command = X"A8" then
 			dig <= dig + '1';
@@ -107,27 +106,36 @@ begin
 
 	end process;
 
+begin 
     process(cnt)
     begin
         case cnt is 
-        when "0000" => div <= "100110001001011010000";
-        when "0001" => div <= "011110100001001000000";
-        when "0010" => div <= "011011011101110100000";
-        when "0011" => div <= "011000011010100000000";
-        when "0100" => div <= "010101010111001100000";
-        when "0101" => div <= "010010010011111000000";
-        when "0110" => div <= "001111010000100100000";
-        when "0111" => div <= "001100001101010000000";
-        when "1000" => div <= "001001001001111100000";
-        when "1001" => div <= "000110000110101000000";
-        when "1010" => div <= "000011000011010100000";
-        when "1011" => div <= "000001100001101010000";
-        when "1100" => div <= "000000110000110101000";
-        when "1101" => div <= "000000010011100010000";
-        when "1110" => div <= "000000001001110001000";   
-        when "1111" => div <= "000000000010011100010"; 
+        when "0000" => div <= "100110001001011010000"
+        when "0001" => div <= "11110100001001000000"
+        when "0010" => div <= "11011011101110100000"
+        when "0011" => div <= "11000011010100000000"
+        when "0100" => div <= "10101010111001100000"
+        when "0101" => div <= "10010010011111000000"
+        when "0110" => div <= "01111010000100100000"
+        when "0111" => div <= "01100001101010000000"
+        when "1000" => div <= "01001001001111100000"
+        when "1001" => div <= "00110000110101000000"
+        when "1010" => div <= "00011000011010100000"
+        when "1011" => div <= "00001100001101010000"
+        when "1100" => div <= "00000110000110101000"
+        when "1101" => div <= "00000010011100010000"
+        when "1110" => div <= "00000001001110001000"   
+        when "1111" => div <= "00000000010011100010" 
     end case;
-	end process;
+
+
+    traba_2_vlsi : entity work.traba_2_vlsi
+    port map(
+        clock => clock,
+        reset => reset,
+        btn => btn_deb,
+        led => led
+    );
 
     buzzer : entity work.buzzer
     port map(
