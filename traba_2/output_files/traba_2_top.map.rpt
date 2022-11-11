@@ -1,5 +1,9 @@
 Analysis & Synthesis report for traba_2_top
+<<<<<<< HEAD
 Thu Nov 10 01:09:46 2022
+=======
+Tue Nov 08 20:40:29 2022
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,10 +22,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
+<<<<<<< HEAD
  13. Port Connectivity Checks: "buzzer:buzzer"
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
+=======
+ 13. Port Connectivity Checks: "controle:controle|buzzer:buzzer"
+ 14. Port Connectivity Checks: "traba_2:traba_2"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 
 
@@ -48,16 +60,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Thu Nov 10 01:09:46 2022       ;
+=======
+; Analysis & Synthesis Status        ; Successful - Tue Nov 08 20:40:29 2022       ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; traba_2_top                                 ;
 ; Top-level Entity Name              ; traba_2_top                                 ;
 ; Family                             ; Cyclone IV E                                ;
+<<<<<<< HEAD
 ; Total logic elements               ; 108                                         ;
 ;     Total combinational functions  ; 102                                         ;
 ;     Dedicated logic registers      ; 80                                          ;
 ; Total registers                    ; 80                                          ;
 ; Total pins                         ; 9                                           ;
+=======
+; Total logic elements               ; 73                                          ;
+;     Total combinational functions  ; 69                                          ;
+;     Dedicated logic registers      ; 54                                          ;
+; Total registers                    ; 54                                          ;
+; Total pins                         ; 10                                          ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -157,6 +181,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
+<<<<<<< HEAD
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -180,6 +205,31 @@ https://fpgasoftware.intel.com/eula.
 ; controle.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/controle.vhd    ;         ;
 ; buzzer.vhd                       ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/buzzer.vhd      ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+=======
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; traba_2_top.vhd                  ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd ;         ;
+; traba_2.vhd                      ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2.vhd     ;         ;
+; synchro.vhd                      ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/synchro.vhd     ;         ;
+; debounce.vhd                     ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/debounce.vhd    ;         ;
+; controle.vhd                     ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd    ;         ;
+; buzzer.vhd                       ; yes             ; User VHDL File  ; D:/Projetos vhdl/projetos-vhdl/traba_2/buzzer.vhd      ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 
 +-----------------------------------------------------------+
@@ -187,6 +237,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
+<<<<<<< HEAD
 ; Estimated Total logic elements              ; 108         ;
 ;                                             ;             ;
 ; Total combinational functions               ; 102         ;
@@ -204,13 +255,38 @@ https://fpgasoftware.intel.com/eula.
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 9           ;
+=======
+; Estimated Total logic elements              ; 73          ;
+;                                             ;             ;
+; Total combinational functions               ; 69          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 14          ;
+;     -- 3 input functions                    ; 5           ;
+;     -- <=2 input functions                  ; 50          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 24          ;
+;     -- arithmetic mode                      ; 45          ;
+;                                             ;             ;
+; Total registers                             ; 54          ;
+;     -- Dedicated logic registers            ; 54          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 10          ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
+<<<<<<< HEAD
 ; Maximum fan-out                             ; 80          ;
 ; Total fan-out                               ; 633         ;
 ; Average fan-out                             ; 3.17        ;
+=======
+; Maximum fan-out                             ; 54          ;
+; Total fan-out                               ; 430         ;
+; Average fan-out                             ; 3.01        ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +---------------------------------------------+-------------+
 
 
@@ -219,6 +295,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+<<<<<<< HEAD
 ; |traba_2_top               ; 102 (9)             ; 80 (5)                    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |traba_2_top                      ; traba_2_top ; work         ;
 ;    |debounce:debounce_1|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_1  ; debounce    ; work         ;
 ;    |debounce:debounce_2|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_2  ; debounce    ; work         ;
@@ -226,6 +303,13 @@ https://fpgasoftware.intel.com/eula.
 ;    |synchro:synchro1_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro1_btn ; synchro     ; work         ;
 ;    |synchro:synchro2_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro2_btn ; synchro     ; work         ;
 ;    |synchro:synchro3_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro3_btn ; synchro     ; work         ;
+=======
+; |traba_2_top               ; 69 (7)              ; 54 (4)                    ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |traba_2_top                      ; traba_2_top ; work         ;
+;    |debounce:debounce_1|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_1  ; debounce    ; work         ;
+;    |debounce:debounce_2|   ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|debounce:debounce_2  ; debounce    ; work         ;
+;    |synchro:synchro1_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro1_btn ; synchro     ; work         ;
+;    |synchro:synchro2_btn|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |traba_2_top|synchro:synchro2_btn ; synchro     ; work         ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -243,6 +327,7 @@ Encoding Type:  One-Hot
 +------------+---------+------------+-----------+------------+
 
 
+<<<<<<< HEAD
 +---------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                              ;
 +----------------------------------------+----------------------------------------+
@@ -285,6 +370,72 @@ Encoding Type:  One-Hot
 ; en_i                       ; Stuck at VCC              ; traba_2:traba_2|num[3], traba_2:traba_2|num[2], traba_2:traba_2|num[1],          ;
 ;                            ; due to stuck port data_in ; traba_2:traba_2|num[0]                                                           ;
 +----------------------------+---------------------------+----------------------------------------------------------------------------------+
+=======
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------------+----------------------------------------+
+; Register name                               ; Reason for Removal                     ;
++---------------------------------------------+----------------------------------------+
+; controle:controle|disparou                  ; Stuck at VCC due to stuck port data_in ;
+; blockbtn2                                   ; Merged with blockbtn1                  ;
+; blockbtn1                                   ; Stuck at GND due to stuck port data_in ;
+; controle:controle|traba_2:traba_2|num[0..3] ; Stuck at GND due to stuck port data_in ;
+; controle:controle|traba_2:traba_2|FSM       ; Stuck at GND due to stuck port data_in ;
+; controle:controle|traba_2:traba_2|valid_o   ; Stuck at GND due to stuck port data_in ;
+; controle:controle|traba_2:traba_2|prime_o   ; Stuck at GND due to stuck port data_in ;
+; controle:controle|traba_2:traba_2|cnt[0..3] ; Stuck at GND due to stuck port data_in ;
+; pressed                                     ; Stuck at GND due to stuck port data_in ;
+; debounce:debounce_3|state                   ; Lost fanout                            ;
+; synchro:synchro3_btn|sync_o                 ; Lost fanout                            ;
+; debounce:debounce_3|timer[0..21]            ; Lost fanout                            ;
+; synchro:synchro3_btn|sig                    ; Lost fanout                            ;
+; buzzer:buzzer|square                        ; Lost fanout                            ;
+; buzzer:buzzer|cnt[0..20]                    ; Lost fanout                            ;
+; controle:controle|cnt[0..24]                ; Lost fanout                            ;
+; controle:controle|FSM.aguard                ; Lost fanout                            ;
+; controle:controle|FSM.apita                 ; Lost fanout                            ;
+; controle:controle|FSM.espera                ; Lost fanout                            ;
+; controle:controle|FSM.fim                   ; Lost fanout                            ;
+; Total Number of Removed Registers = 91      ;                                        ;
++---------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
++------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                            ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; controle:controle|traba_2:traba_2|num[0] ; Stuck at GND              ; controle:controle|traba_2:traba_2|valid_o,                                           ;
+;                                          ; due to stuck port data_in ; controle:controle|traba_2:traba_2|prime_o,                                           ;
+;                                          ;                           ; controle:controle|traba_2:traba_2|cnt[3], controle:controle|traba_2:traba_2|cnt[2],  ;
+;                                          ;                           ; controle:controle|traba_2:traba_2|cnt[1], controle:controle|traba_2:traba_2|cnt[0],  ;
+;                                          ;                           ; controle:controle|cnt[24], controle:controle|cnt[23], controle:controle|cnt[22],     ;
+;                                          ;                           ; controle:controle|cnt[21], controle:controle|cnt[20], controle:controle|cnt[19],     ;
+;                                          ;                           ; controle:controle|cnt[18], controle:controle|cnt[17], controle:controle|cnt[16],     ;
+;                                          ;                           ; controle:controle|cnt[15], controle:controle|cnt[14], controle:controle|cnt[13],     ;
+;                                          ;                           ; controle:controle|cnt[12], controle:controle|cnt[11], controle:controle|cnt[10],     ;
+;                                          ;                           ; controle:controle|cnt[9], controle:controle|cnt[8], controle:controle|cnt[7],        ;
+;                                          ;                           ; controle:controle|cnt[6], controle:controle|cnt[5], controle:controle|cnt[4],        ;
+;                                          ;                           ; controle:controle|cnt[3], controle:controle|cnt[2], controle:controle|cnt[1],        ;
+;                                          ;                           ; controle:controle|cnt[0], controle:controle|FSM.aguard, controle:controle|FSM.apita, ;
+;                                          ;                           ; controle:controle|FSM.espera, controle:controle|FSM.fim                              ;
+; pressed                                  ; Stuck at GND              ; debounce:debounce_3|state, synchro:synchro3_btn|sync_o,                              ;
+;                                          ; due to stuck port data_in ; debounce:debounce_3|timer[21], debounce:debounce_3|timer[20],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[19], debounce:debounce_3|timer[18],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[17], debounce:debounce_3|timer[16],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[15], debounce:debounce_3|timer[14],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[13], debounce:debounce_3|timer[12],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[11], debounce:debounce_3|timer[10],                        ;
+;                                          ;                           ; debounce:debounce_3|timer[9], debounce:debounce_3|timer[8],                          ;
+;                                          ;                           ; debounce:debounce_3|timer[7], debounce:debounce_3|timer[6],                          ;
+;                                          ;                           ; debounce:debounce_3|timer[5], debounce:debounce_3|timer[4],                          ;
+;                                          ;                           ; debounce:debounce_3|timer[3], debounce:debounce_3|timer[2],                          ;
+;                                          ;                           ; debounce:debounce_3|timer[1], debounce:debounce_3|timer[0], synchro:synchro3_btn|sig ;
+; buzzer:buzzer|square                     ; Lost Fanouts              ; buzzer:buzzer|cnt[20], buzzer:buzzer|cnt[19], buzzer:buzzer|cnt[18],                 ;
+;                                          ;                           ; buzzer:buzzer|cnt[17], buzzer:buzzer|cnt[16], buzzer:buzzer|cnt[15],                 ;
+;                                          ;                           ; buzzer:buzzer|cnt[14], buzzer:buzzer|cnt[13], buzzer:buzzer|cnt[12]                  ;
++------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 
 +------------------------------------------------------+
@@ -292,10 +443,17 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< HEAD
 ; Total registers                              ; 80    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 66    ;
 ; Number of registers using Asynchronous Clear ; 74    ;
+=======
+; Total registers                              ; 54    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 44    ;
+; Number of registers using Asynchronous Clear ; 50    ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 3     ;
 ; Number of registers using Preset             ; 0     ;
@@ -307,6 +465,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+<<<<<<< HEAD
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |traba_2_top|traba_2:traba_2|cnt[3]        ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |traba_2_top|traba_2:traba_2|valid_o       ;
 ; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_2|timer[10] ;
@@ -314,11 +473,21 @@ Encoding Type:  One-Hot
 ; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_3|timer[1]  ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |traba_2_top|led[3]                        ;
 ; 4:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |traba_2_top|controle:controle|cnt[21]     ;
+=======
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_1|timer[3]  ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_2|timer[11] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |traba_2_top|debounce:debounce_3|timer[12] ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |traba_2_top|controle:controle|cnt[12]     ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
+<<<<<<< HEAD
 ; Port Connectivity Checks: "buzzer:buzzer"                                                                      ;
+=======
+; Port Connectivity Checks: "controle:controle|buzzer:buzzer"                                                    ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -326,11 +495,25 @@ Encoding Type:  One-Hot
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
+=======
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "traba_2:traba_2"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; prime_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; valid_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< HEAD
 ; boundary_port         ; 9                           ;
 ; cycloneiii_ff         ; 80                          ;
 ;     CLR               ; 5                           ;
@@ -350,6 +533,27 @@ Encoding Type:  One-Hot
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
 ; Average LUT depth     ; 2.74                        ;
+=======
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 54                          ;
+;     CLR               ; 3                           ;
+;     CLR SLD           ; 44                          ;
+;     ENA CLR           ; 3                           ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 73                          ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 28                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 14                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.67                        ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +-----------------------+-----------------------------+
 
 
@@ -358,7 +562,11 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< HEAD
 ; Top            ; 00:00:01     ;
+=======
+; Top            ; 00:00:00     ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 +----------------+--------------+
 
 
@@ -368,6 +576,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Thu Nov 10 01:09:32 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traba_2 -c traba_2_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -411,5 +620,60 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Processing ended: Thu Nov 10 01:09:46 2022
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:31
+=======
+    Info: Processing started: Tue Nov 08 20:40:18 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traba_2 -c traba_2_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file traba_2_top.vhd
+    Info (12022): Found design unit 1: traba_2_top-traba_2_top File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 22
+    Info (12023): Found entity 1: traba_2_top File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file traba_2.vhd
+    Info (12022): Found design unit 1: traba_2-traba_2 File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2.vhd Line: 21
+    Info (12023): Found entity 1: traba_2 File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file synchro.vhd
+    Info (12022): Found design unit 1: synchro-synchro File: D:/Projetos vhdl/projetos-vhdl/traba_2/synchro.vhd Line: 16
+    Info (12023): Found entity 1: synchro File: D:/Projetos vhdl/projetos-vhdl/traba_2/synchro.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: debounce-debounce File: D:/Projetos vhdl/projetos-vhdl/traba_2/debounce.vhd Line: 16
+    Info (12023): Found entity 1: debounce File: D:/Projetos vhdl/projetos-vhdl/traba_2/debounce.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file controle.vhd
+    Info (12022): Found design unit 1: controle-controle File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 15
+    Info (12023): Found entity 1: controle File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file buzzer.vhd
+    Info (12022): Found design unit 1: buzzer-buzzer File: D:/Projetos vhdl/projetos-vhdl/traba_2/buzzer.vhd Line: 16
+    Info (12023): Found entity 1: buzzer File: D:/Projetos vhdl/projetos-vhdl/traba_2/buzzer.vhd Line: 5
+Info (12127): Elaborating entity "traba_2_top" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at traba_2_top.vhd(40): used implicit default value for signal "buzzer_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at traba_2_top.vhd(42): object "prime_o" assigned a value but never read File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at traba_2_top.vhd(43): object "valid_o" assigned a value but never read File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 43
+Warning (10541): VHDL Signal Declaration warning at traba_2_top.vhd(53): used implicit default value for signal "div" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 53
+Info (12128): Elaborating entity "synchro" for hierarchy "synchro:synchro1_btn" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 113
+Info (12128): Elaborating entity "traba_2" for hierarchy "traba_2:traba_2" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 134
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:debounce_1" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 144
+Info (12128): Elaborating entity "buzzer" for hierarchy "buzzer:buzzer" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 168
+Info (12128): Elaborating entity "controle" for hierarchy "controle:controle" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 176
+Warning (10541): VHDL Signal Declaration warning at controle.vhd(20): used implicit default value for signal "div" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at controle.vhd(21): used implicit default value for signal "led" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at controle.vhd(24): object "buzzer_o" assigned a value but never read File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at controle.vhd(28): used implicit default value for signal "en_i" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2/controle.vhd Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "buzzer_o" is stuck at GND File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 76 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "btn3_n" File: D:/Projetos vhdl/projetos-vhdl/traba_2/traba_2_top.vhd Line: 14
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 73 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Tue Nov 08 20:40:29 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 

@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="65ddf399c402820fce12"/>
+=======
+    <hash md5_digest_80b="6a067bb7fcc5bcfcf45d"/>
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
   </project>
   <file_info>
     <file device="EP4CE6E22C8" path="traba_2_top.sof" usercode="0xFFFFFFFF"/>

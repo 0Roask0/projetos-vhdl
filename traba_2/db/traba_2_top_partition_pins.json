@@ -34,10 +34,13 @@
 				{
 					"name" : "btn2_n",
 					"strict" : false
+<<<<<<< HEAD
 				},
 				{
 					"name" : "btn3_n",
 					"strict" : false
+=======
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 				}
 			]
 		}

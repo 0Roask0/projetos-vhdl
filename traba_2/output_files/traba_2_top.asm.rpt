@@ -1,5 +1,9 @@
 Assembler report for traba_2_top
+<<<<<<< HEAD
 Thu Nov 10 01:09:56 2022
+=======
+Tue Nov 08 20:40:41 2022
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +14,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
+<<<<<<< HEAD
   5. Assembler Device Options: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2/output_files/traba_2_top.sof
+=======
+  5. Assembler Device Options: D:/Projetos vhdl/projetos-vhdl/traba_2/output_files/traba_2_top.sof
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
   6. Assembler Messages
 
 
@@ -38,7 +46,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Thu Nov 10 01:09:56 2022 ;
+=======
+; Assembler Status      ; Successful - Tue Nov 08 20:40:41 2022 ;
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 ; Revision Name         ; traba_2_top                           ;
 ; Top-level Entity Name ; traba_2_top                           ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,6 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
+<<<<<<< HEAD
 +---------------------------------------------------------------------------------------------------------+
 ; Assembler Generated Files                                                                               ;
 +---------------------------------------------------------------------------------------------------------+
@@ -70,6 +83,25 @@ https://fpgasoftware.intel.com/eula.
 ; JTAG usercode  ; 0x0009FF5D                                                                                                       ;
 ; Checksum       ; 0x0009FF5D                                                                                                       ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
+=======
++---------------------------------------------------------------------+
+; Assembler Generated Files                                           ;
++---------------------------------------------------------------------+
+; File Name                                                           ;
++---------------------------------------------------------------------+
+; D:/Projetos vhdl/projetos-vhdl/traba_2/output_files/traba_2_top.sof ;
++---------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Projetos vhdl/projetos-vhdl/traba_2/output_files/traba_2_top.sof ;
++----------------+------------------------------------------------------------------------------+
+; Option         ; Setting                                                                      ;
++----------------+------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0009C7D1                                                                   ;
+; Checksum       ; 0x0009C7D1                                                                   ;
++----------------+------------------------------------------------------------------------------+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 
 +--------------------+
@@ -78,15 +110,25 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Thu Nov 10 01:09:54 2022
+=======
+    Info: Processing started: Tue Nov 08 20:40:40 2022
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off traba_2 -c traba_2_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4676 megabytes
+<<<<<<< HEAD
     Info: Processing ended: Thu Nov 10 01:09:56 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
+=======
+    Info: Processing ended: Tue Nov 08 20:40:41 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 

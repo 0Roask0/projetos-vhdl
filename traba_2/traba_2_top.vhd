@@ -42,6 +42,8 @@ architecture traba_2_top of traba_2_top is
     signal prime_o : std_logic;
     signal valid_o : std_logic;
     signal en_i : std_logic;
+    signal buzzer_control : std_logic;
+    signal buzzer_control_o : std_logic;
 
     signal blockbtn1 : std_logic;
     signal blockbtn2 : std_logic;
@@ -59,22 +61,36 @@ begin
     btn3_sync <= not btn3_n_sync;
     led_n <= not led;
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 
 
     process(clock, reset)
     begin
         if reset = '1' then 
             pressed <= '0';
+<<<<<<< HEAD
             led <= (others => '0');
+=======
+            en_i <= '0';
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
         elsif rising_edge(clock) then
             if btn1_deb = '1' and pressed = '0' then
                 led <= led + '1';
                 pressed<= '1';
             elsif btn1_deb = '0' and pressed = '1' then
+<<<<<<< HEAD
                 led <= led;
 			else
                 pressed <= '0';
             end if;
+=======
+                pressed <= '0';
+            end if;
+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
             if btn2_deb = '1' and pressed = '0' then
                 led <= led - '1';
                 pressed<= '1';
@@ -83,6 +99,10 @@ begin
 			else
                 pressed <= '0';
             end if;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
             if btn3_deb = '1' and pressed = '0' then
                 en_i <= '1';
                 pressed<= '1';
@@ -90,9 +110,27 @@ begin
                 pressed <= '0';
                 led <= led;
             end if;
+
+            if btn3_deb = '1' and pressed = '1' then
+                blockbtn1 <= '1';
+                blockbtn2 <= '1';
+            else
+                pressed <= '0';
+            end if;
+
+            if blockbtn1 = '1' and blockbtn2 = '1' then
+                led <= (others => '0');
+            else
+                blockbtn1 <= '0';
+                blockbtn2 <= '0';
+            end if;
         end if;  
     end process;
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
     
     synchro1_btn : entity work.synchro
     port map(
@@ -160,9 +198,13 @@ begin
     controle : entity work.controle
     port map(
         clock => clock,
+<<<<<<< HEAD
         reset => reset,
         buzzer_en => buzzer_en,
 		prime_o => prime_o,
 		valid_o => valid_o 
+=======
+        reset => reset
+>>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
     );
 end architecture;
