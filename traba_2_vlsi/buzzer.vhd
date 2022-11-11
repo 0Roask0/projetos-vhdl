@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity buzzer is
     port(
         clock : in std_logic;
-        reset : is std_logic;
+        reset : in std_logic;
 
         in_div : in std_logic_vector( 20 downto 0 );
         en : in std_logic;
