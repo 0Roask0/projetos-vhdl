@@ -1,0 +1,1564 @@
+Timing Analyzer report for traba_2_vlsi_top
+Fri Nov 11 19:10:10 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'ir:ir_driver|command[0]'
+ 13. Slow 1200mV 85C Model Setup: 'clock'
+ 14. Slow 1200mV 85C Model Hold: 'ir:ir_driver|command[0]'
+ 15. Slow 1200mV 85C Model Hold: 'clock'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'ir:ir_driver|command[0]'
+ 24. Slow 1200mV 0C Model Setup: 'clock'
+ 25. Slow 1200mV 0C Model Hold: 'ir:ir_driver|command[0]'
+ 26. Slow 1200mV 0C Model Hold: 'clock'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'ir:ir_driver|command[0]'
+ 34. Fast 1200mV 0C Model Setup: 'clock'
+ 35. Fast 1200mV 0C Model Hold: 'ir:ir_driver|command[0]'
+ 36. Fast 1200mV 0C Model Hold: 'clock'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths Summary
+ 49. Clock Status Summary
+ 50. Unconstrained Input Ports
+ 51. Unconstrained Output Ports
+ 52. Unconstrained Input Ports
+ 53. Unconstrained Output Ports
+ 54. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; traba_2_vlsi_top                                    ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.9%      ;
+;     Processor 3            ;   0.7%      ;
+;     Processors 4-8         ;   0.7%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                           ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; Clock Name              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                     ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; clock                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                   ;
+; ir:ir_driver|command[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ir:ir_driver|command[0] } ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                            ;
++------------+-----------------+-------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note ;
++------------+-----------------+-------------------------+------+
+; 182.75 MHz ; 182.75 MHz      ; ir:ir_driver|command[0] ;      ;
+; 244.86 MHz ; 244.86 MHz      ; clock                   ;      ;
++------------+-----------------+-------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary              ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; ir:ir_driver|command[0] ; -5.448 ; -21.292       ;
+; clock                   ; -3.084 ; -125.061      ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; ir:ir_driver|command[0] ; -0.061 ; -0.095        ;
+; clock                   ; 0.434  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------------------------+--------+----------------+
+; Clock                   ; Slack  ; End Point TNS  ;
++-------------------------+--------+----------------+
+; clock                   ; -3.000 ; -86.272        ;
+; ir:ir_driver|command[0] ; 0.345  ; 0.000          ;
++-------------------------+--------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ir:ir_driver|command[0]'                                                                                  ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; -5.448 ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 6.151      ;
+; -5.439 ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 6.146      ;
+; -5.398 ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 6.101      ;
+; -5.332 ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 6.035      ;
+; -5.316 ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 6.023      ;
+; -5.283 ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.990      ;
+; -5.267 ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.974      ;
+; -5.204 ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.911      ;
+; -5.201 ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.908      ;
+; -5.196 ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 5.899      ;
+; -5.126 ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.833      ;
+; -5.093 ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 5.796      ;
+; -5.089 ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.805      ;
+; -5.068 ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.775      ;
+; -5.065 ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.772      ;
+; -5.052 ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.768      ;
+; -5.051 ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 5.754      ;
+; -4.986 ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.702      ;
+; -4.961 ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.668      ;
+; -4.928 ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.635      ;
+; -4.923 ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.630      ;
+; -4.920 ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.627      ;
+; -4.850 ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.233      ; 5.557      ;
+; -4.850 ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.566      ;
+; -4.847 ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.231      ; 5.550      ;
+; -4.734 ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.450      ;
+; -4.705 ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.421      ;
+; -4.447 ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.235      ; 5.163      ;
+; -3.529 ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.060     ; 3.451      ;
+; -3.485 ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.056     ; 3.411      ;
+; -3.380 ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.054     ; 3.310      ;
+; -3.351 ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.054     ; 3.279      ;
+; -3.321 ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.052     ; 3.251      ;
+; -3.290 ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.058     ; 3.216      ;
+; -2.911 ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.056     ; 2.837      ;
+; -2.712 ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.055     ; 2.639      ;
+; -2.675 ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.056     ; 2.603      ;
+; -2.656 ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.056     ; 2.591      ;
+; -2.236 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 4.109      ; 6.090      ;
+; -2.177 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 4.111      ; 6.031      ;
+; -1.926 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 4.111      ; 6.280      ;
+; -1.877 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 4.107      ; 5.727      ;
+; -1.650 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 4.109      ; 6.004      ;
+; -1.647 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 4.107      ; 5.997      ;
+; -1.531 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 4.111      ; 5.394      ;
+; -0.973 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 4.111      ; 5.336      ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clock'                                                                                                 ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -3.084 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.076     ; 4.009      ;
+; -3.082 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 4.002      ;
+; -3.074 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 3.994      ;
+; -3.043 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.962      ;
+; -2.955 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.076     ; 3.880      ;
+; -2.893 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.812      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.883 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 1.000        ; -0.576     ; 3.308      ;
+; -2.879 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.798      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.861 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 1.000        ; -0.580     ; 3.282      ;
+; -2.838 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 3.758      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.781 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.968      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.779 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.961      ;
+; -2.773 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.692      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.771 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.953      ;
+; -2.756 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 3.676      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.652 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.186      ; 3.839      ;
+; -2.617 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 4.014      ;
+; -2.610 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.529      ;
+; -2.575 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.494      ;
+; -2.574 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.493      ;
+; -2.569 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.966      ;
+; -2.567 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.486      ;
+; -2.550 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.469      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.535 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.717      ;
+; -2.532 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.929      ;
+; -2.504 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.901      ;
+; -2.494 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.891      ;
+; -2.471 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[15]  ; clock        ; clock       ; 1.000        ; -0.579     ; 2.893      ;
+; -2.466 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.863      ;
+; -2.465 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.384      ;
+; -2.465 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.862      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.453 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.181      ; 3.635      ;
+; -2.452 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.371      ;
+; -2.447 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.844      ;
+; -2.433 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.830      ;
+; -2.429 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.826      ;
+; -2.410 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 1.000        ; 0.399      ; 3.810      ;
+; -2.410 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.329      ;
+; -2.400 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.797      ;
+; -2.396 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.793      ;
+; -2.386 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 3.306      ;
+; -2.382 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.779      ;
+; -2.382 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.779      ;
+; -2.381 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.396      ; 3.778      ;
+; -2.380 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.396      ; 3.777      ;
+; -2.376 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.081     ; 3.296      ;
+; -2.369 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 1.000        ; -0.144     ; 3.226      ;
+; -2.369 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 1.000        ; -0.144     ; 3.226      ;
+; -2.369 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[3]   ; clock        ; clock       ; 1.000        ; -0.144     ; 3.226      ;
+; -2.369 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 1.000        ; -0.144     ; 3.226      ;
+; -2.369 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 1.000        ; -0.144     ; 3.226      ;
+; -2.369 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.082     ; 3.288      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ir:ir_driver|command[0]'                                                                                   ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.061 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 4.280      ; 4.480      ;
+; -0.034 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 4.282      ; 4.509      ;
+; 0.034  ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 4.281      ; 4.576      ;
+; 0.161  ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 4.278      ; 4.700      ;
+; 0.614  ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 4.280      ; 4.675      ;
+; 0.647  ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 4.282      ; 4.710      ;
+; 0.761  ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 4.281      ; 4.823      ;
+; 0.873  ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 4.278      ; 4.932      ;
+; 2.196  ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.056      ; 2.252      ;
+; 2.259  ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.055      ; 2.314      ;
+; 2.369  ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.056      ; 2.425      ;
+; 2.390  ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.056      ; 2.446      ;
+; 2.484  ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.527      ;
+; 2.506  ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 3.545      ;
+; 2.541  ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.058      ; 2.599      ;
+; 2.564  ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.054      ; 2.618      ;
+; 2.609  ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.057      ; 2.666      ;
+; 2.628  ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 3.669      ;
+; 2.693  ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.059      ; 2.752      ;
+; 2.695  ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 3.737      ;
+; 2.718  ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.052      ; 2.770      ;
+; 2.735  ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.055      ; 2.790      ;
+; 2.735  ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 3.777      ;
+; 2.821  ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.864      ;
+; 2.823  ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 3.864      ;
+; 2.829  ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.872      ;
+; 2.850  ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.893      ;
+; 2.884  ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.927      ;
+; 2.902  ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 3.943      ;
+; 2.914  ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 3.953      ;
+; 2.947  ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 3.990      ;
+; 2.993  ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 4.032      ;
+; 2.999  ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 4.040      ;
+; 3.004  ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 4.046      ;
+; 3.050  ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 4.091      ;
+; 3.055  ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 4.097      ;
+; 3.061  ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 4.103      ;
+; 3.148  ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 4.187      ;
+; 3.151  ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 4.192      ;
+; 3.194  ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 4.236      ;
+; 3.201  ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 4.240      ;
+; 3.261  ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 4.300      ;
+; 3.434  ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.511      ; 4.475      ;
+; 3.448  ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.513      ; 4.491      ;
+; 3.556  ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.512      ; 4.598      ;
+; 3.630  ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.509      ; 4.669      ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clock'                                                                                                 ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.434 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; ir:ir_driver|err_flag     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.100      ; 0.746      ;
+; 0.454 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.080      ; 0.746      ;
+; 0.526 ; synchro:synchro_ir|sync_o ; ir:ir_driver|state.LEAD_9 ; clock        ; clock       ; 0.000        ; 0.080      ; 0.818      ;
+; 0.542 ; ir:ir_driver|cntr[18]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.080      ; 0.834      ;
+; 0.626 ; ir:ir_driver|receive[1]   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.098      ; 0.936      ;
+; 0.643 ; ir:ir_driver|receive[7]   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 0.000        ; 0.080      ; 0.935      ;
+; 0.667 ; ir:ir_driver|receive[9]   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 0.000        ; 0.080      ; 0.959      ;
+; 0.668 ; ir:ir_driver|receive[13]  ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 0.000        ; 0.080      ; 0.960      ;
+; 0.723 ; ir:ir_driver|receive[3]   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.098      ; 1.033      ;
+; 0.745 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.037      ;
+; 0.746 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.038      ;
+; 0.749 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.041      ;
+; 0.749 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.041      ;
+; 0.749 ; ir:ir_driver|state.LEAD_9 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.080      ; 1.041      ;
+; 0.755 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.047      ;
+; 0.762 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.054      ;
+; 0.765 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.057      ;
+; 0.766 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.058      ;
+; 0.769 ; ir:ir_driver|receive[11]  ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.061      ;
+; 0.769 ; ir:ir_driver|receive[10]  ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.061      ;
+; 0.770 ; ir:ir_driver|receive[12]  ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.062      ;
+; 0.770 ; ir:ir_driver|receive[8]   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 0.000        ; 0.080      ; 1.062      ;
+; 0.771 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.063      ;
+; 0.772 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.064      ;
+; 0.772 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.064      ;
+; 0.779 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.071      ;
+; 0.780 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.072      ;
+; 0.780 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.072      ;
+; 0.780 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[0]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.072      ;
+; 0.793 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.085      ;
+; 0.797 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.089      ;
+; 0.799 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.091      ;
+; 0.801 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.093      ;
+; 0.802 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.094      ;
+; 0.803 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.095      ;
+; 0.803 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.095      ;
+; 0.805 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.097      ;
+; 0.810 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.102      ;
+; 0.903 ; synchro:synchro_ir|sync_o ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.578      ; 1.693      ;
+; 0.934 ; synchro:synchro_ir|sync_o ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.578      ; 1.724      ;
+; 0.980 ; ir:ir_driver|receive[10]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 0.000        ; 0.387      ; 1.579      ;
+; 0.985 ; ir:ir_driver|receive[5]   ; ir:ir_driver|receive[6]   ; clock        ; clock       ; 0.000        ; 0.144      ; 1.341      ;
+; 1.017 ; ir:ir_driver|receive[15]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 0.000        ; 0.386      ; 1.615      ;
+; 1.040 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.057      ; 1.309      ;
+; 1.063 ; ir:ir_driver|receive[4]   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.098      ; 1.373      ;
+; 1.091 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.054      ; 1.357      ;
+; 1.092 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.054      ; 1.358      ;
+; 1.094 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[3]   ; clock        ; clock       ; 0.000        ; 0.054      ; 1.360      ;
+; 1.094 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.054      ; 1.360      ;
+; 1.095 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.054      ; 1.361      ;
+; 1.100 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.392      ;
+; 1.109 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.401      ;
+; 1.110 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.402      ;
+; 1.110 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.402      ;
+; 1.110 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.402      ;
+; 1.116 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.408      ;
+; 1.118 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.410      ;
+; 1.119 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.411      ;
+; 1.119 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.411      ;
+; 1.119 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.411      ;
+; 1.127 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.419      ;
+; 1.127 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.419      ;
+; 1.132 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.424      ;
+; 1.133 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.425      ;
+; 1.133 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.425      ;
+; 1.134 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.426      ;
+; 1.136 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.428      ;
+; 1.141 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.433      ;
+; 1.141 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.433      ;
+; 1.142 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.434      ;
+; 1.147 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.439      ;
+; 1.150 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.442      ;
+; 1.151 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.443      ;
+; 1.155 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.447      ;
+; 1.158 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.450      ;
+; 1.160 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.452      ;
+; 1.163 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.455      ;
+; 1.164 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.456      ;
+; 1.164 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.456      ;
+; 1.166 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.458      ;
+; 1.169 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.461      ;
+; 1.172 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.464      ;
+; 1.173 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.465      ;
+; 1.175 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.080      ; 1.467      ;
+; 1.223 ; ir:ir_driver|receive[6]   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 0.000        ; -0.400     ; 1.035      ;
+; 1.226 ; ir:ir_driver|receive[9]   ; ir:ir_driver|command[1]   ; clock        ; clock       ; 0.000        ; 0.387      ; 1.825      ;
+; 1.231 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.523      ;
+; 1.240 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.532      ;
+; 1.247 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.539      ;
+; 1.249 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.541      ;
+; 1.250 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.542      ;
+; 1.250 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.542      ;
+; 1.250 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.542      ;
+; 1.256 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.548      ;
+; 1.258 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.550      ;
+; 1.259 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.551      ;
+; 1.259 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.080      ; 1.551      ;
+; 1.263 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 0.000        ; 0.581      ; 2.056      ;
+; 1.264 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.080      ; 1.556      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                      ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note                                                          ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+; 186.43 MHz ; 186.43 MHz      ; ir:ir_driver|command[0] ;                                                               ;
+; 257.67 MHz ; 250.0 MHz       ; clock                   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; ir:ir_driver|command[0] ; -5.268 ; -20.615       ;
+; clock                   ; -2.881 ; -113.067      ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary               ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; ir:ir_driver|command[0] ; 0.014 ; 0.000         ;
+; clock                   ; 0.384 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -3.000 ; -86.272       ;
+; ir:ir_driver|command[0] ; 0.175  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ir:ir_driver|command[0]'                                                                                   ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; -5.268 ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.836      ;
+; -5.236 ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.804      ;
+; -5.234 ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.806      ;
+; -5.165 ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.705      ;
+; -5.140 ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.708      ;
+; -5.133 ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.673      ;
+; -5.103 ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.675      ;
+; -5.045 ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.617      ;
+; -5.036 ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.576      ;
+; -5.034 ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.602      ;
+; -4.964 ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.536      ;
+; -4.948 ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.527      ;
+; -4.934 ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.502      ;
+; -4.931 ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.471      ;
+; -4.916 ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.495      ;
+; -4.901 ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.473      ;
+; -4.831 ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.371      ;
+; -4.828 ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.396      ;
+; -4.813 ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.392      ;
+; -4.801 ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.373      ;
+; -4.776 ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.316      ;
+; -4.724 ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.018      ; 5.264      ;
+; -4.714 ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.293      ;
+; -4.681 ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.016      ; 5.249      ;
+; -4.663 ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.235      ;
+; -4.614 ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.193      ;
+; -4.500 ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 5.079      ;
+; -4.335 ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 1.019      ; 4.914      ;
+; -3.252 ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.051     ; 3.263      ;
+; -3.173 ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.048     ; 3.188      ;
+; -3.115 ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.046     ; 3.101      ;
+; -3.056 ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.047     ; 3.072      ;
+; -3.032 ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.049     ; 3.015      ;
+; -3.011 ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.045     ; 3.029      ;
+; -2.673 ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.048     ; 2.687      ;
+; -2.516 ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.048     ; 2.500      ;
+; -2.469 ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.048     ; 2.484      ;
+; -2.398 ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.048     ; 2.420      ;
+; -2.182 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 3.669      ; 5.623      ;
+; -2.069 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 3.670      ; 5.542      ;
+; -1.950 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 3.670      ; 5.923      ;
+; -1.877 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 3.667      ; 5.346      ;
+; -1.762 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 3.669      ; 5.703      ;
+; -1.667 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 3.667      ; 5.636      ;
+; -1.557 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 3.670      ; 5.037      ;
+; -0.991 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 3.670      ; 4.971      ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clock'                                                                                                  ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -2.881 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.068     ; 3.815      ;
+; -2.863 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.791      ;
+; -2.823 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.754      ;
+; -2.815 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.746      ;
+; -2.762 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.068     ; 3.696      ;
+; -2.717 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.645      ;
+; -2.680 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.608      ;
+; -2.628 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.559      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.625 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 1.000        ; -0.541     ; 3.086      ;
+; -2.610 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.538      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.594 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 1.000        ; -0.543     ; 3.053      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.587 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.771      ;
+; -2.532 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.463      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.529 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.710      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.521 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.702      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.468 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.182      ; 3.652      ;
+; -2.414 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.342      ;
+; -2.413 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.341      ;
+; -2.408 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.336      ;
+; -2.396 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.324      ;
+; -2.372 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.744      ;
+; -2.335 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.707      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.334 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.515      ;
+; -2.315 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.687      ;
+; -2.305 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.233      ;
+; -2.295 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.223      ;
+; -2.290 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.370      ; 3.662      ;
+; -2.269 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.197      ;
+; -2.253 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.370      ; 3.625      ;
+; -2.246 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.174      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.238 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.179      ; 3.419      ;
+; -2.233 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.370      ; 3.605      ;
+; -2.228 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[15]  ; clock        ; clock       ; 1.000        ; -0.542     ; 2.688      ;
+; -2.211 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.583      ;
+; -2.210 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 1.000        ; 0.379      ; 3.591      ;
+; -2.209 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.581      ;
+; -2.179 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.551      ;
+; -2.168 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.540      ;
+; -2.167 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.539      ;
+; -2.162 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.093      ;
+; -2.162 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.071     ; 3.093      ;
+; -2.161 ; ir:ir_driver|state.DATA   ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.540     ; 2.623      ;
+; -2.158 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.370      ; 3.530      ;
+; -2.155 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 1.000        ; -0.143     ; 3.014      ;
+; -2.155 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 1.000        ; -0.143     ; 3.014      ;
+; -2.155 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[3]   ; clock        ; clock       ; 1.000        ; -0.143     ; 3.014      ;
+; -2.155 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 1.000        ; -0.143     ; 3.014      ;
+; -2.155 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 1.000        ; -0.143     ; 3.014      ;
+; -2.155 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.527      ;
+; -2.135 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.074     ; 3.063      ;
+; -2.127 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.370      ; 3.499      ;
+; -2.122 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.370      ; 3.494      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ir:ir_driver|command[0]'                                                                                   ;
++-------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.014 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 3.823      ; 4.077      ;
+; 0.023 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 3.824      ; 4.087      ;
+; 0.099 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 3.824      ; 4.163      ;
+; 0.229 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 3.821      ; 4.290      ;
+; 0.806 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 3.824      ; 4.390      ;
+; 0.814 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 3.823      ; 4.397      ;
+; 0.947 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 3.824      ; 4.531      ;
+; 1.005 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 3.821      ; 4.586      ;
+; 1.950 ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.048      ; 1.998      ;
+; 2.013 ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.048      ; 2.061      ;
+; 2.118 ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.048      ; 2.166      ;
+; 2.197 ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.048      ; 2.245      ;
+; 2.283 ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.050      ; 2.333      ;
+; 2.304 ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.047      ; 2.351      ;
+; 2.336 ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.049      ; 2.385      ;
+; 2.338 ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.136      ;
+; 2.374 ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.169      ;
+; 2.401 ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.051      ; 2.452      ;
+; 2.419 ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.045      ; 2.464      ;
+; 2.433 ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.048      ; 2.481      ;
+; 2.468 ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.265      ;
+; 2.531 ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.329      ;
+; 2.597 ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.395      ;
+; 2.669 ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.467      ;
+; 2.675 ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.472      ;
+; 2.684 ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.482      ;
+; 2.709 ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.507      ;
+; 2.762 ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.557      ;
+; 2.764 ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.561      ;
+; 2.794 ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.592      ;
+; 2.837 ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.635      ;
+; 2.851 ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.646      ;
+; 2.877 ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.675      ;
+; 2.886 ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.683      ;
+; 2.891 ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.689      ;
+; 2.929 ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.726      ;
+; 2.934 ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.732      ;
+; 2.976 ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 3.774      ;
+; 2.992 ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.789      ;
+; 3.046 ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.841      ;
+; 3.089 ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.884      ;
+; 3.092 ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 3.887      ;
+; 3.193 ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.267      ; 3.990      ;
+; 3.311 ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 4.109      ;
+; 3.374 ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.265      ; 4.169      ;
+; 3.408 ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 1.268      ; 4.206      ;
++-------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clock'                                                                                                  ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.384 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; ir:ir_driver|err_flag     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.090      ; 0.669      ;
+; 0.402 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.483 ; synchro:synchro_ir|sync_o ; ir:ir_driver|state.LEAD_9 ; clock        ; clock       ; 0.000        ; 0.072      ; 0.750      ;
+; 0.499 ; ir:ir_driver|cntr[18]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.072      ; 0.766      ;
+; 0.585 ; ir:ir_driver|receive[1]   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.088      ; 0.868      ;
+; 0.600 ; ir:ir_driver|receive[7]   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 0.000        ; 0.072      ; 0.867      ;
+; 0.620 ; ir:ir_driver|receive[13]  ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.887      ;
+; 0.620 ; ir:ir_driver|receive[9]   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.887      ;
+; 0.672 ; ir:ir_driver|receive[3]   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.088      ; 0.955      ;
+; 0.693 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.960      ;
+; 0.693 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.960      ;
+; 0.697 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.964      ;
+; 0.697 ; ir:ir_driver|state.LEAD_9 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.072      ; 0.964      ;
+; 0.699 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.966      ;
+; 0.703 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.970      ;
+; 0.710 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.979      ;
+; 0.714 ; ir:ir_driver|receive[11]  ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.981      ;
+; 0.714 ; ir:ir_driver|receive[10]  ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.981      ;
+; 0.715 ; ir:ir_driver|receive[8]   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 0.000        ; 0.072      ; 0.982      ;
+; 0.715 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.982      ;
+; 0.716 ; ir:ir_driver|receive[12]  ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.983      ;
+; 0.717 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.072      ; 0.984      ;
+; 0.723 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.990      ;
+; 0.724 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 0.000        ; 0.072      ; 0.991      ;
+; 0.724 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.072      ; 0.991      ;
+; 0.724 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.991      ;
+; 0.731 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[0]      ; clock        ; clock       ; 0.000        ; 0.072      ; 0.998      ;
+; 0.737 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.004      ;
+; 0.740 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.007      ;
+; 0.743 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.010      ;
+; 0.744 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.011      ;
+; 0.744 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.011      ;
+; 0.744 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.011      ;
+; 0.745 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.012      ;
+; 0.747 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.014      ;
+; 0.753 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.020      ;
+; 0.800 ; synchro:synchro_ir|sync_o ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.534      ; 1.529      ;
+; 0.837 ; synchro:synchro_ir|sync_o ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.534      ; 1.566      ;
+; 0.864 ; ir:ir_driver|receive[5]   ; ir:ir_driver|receive[6]   ; clock        ; clock       ; 0.000        ; 0.139      ; 1.198      ;
+; 0.880 ; ir:ir_driver|receive[10]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 0.000        ; 0.361      ; 1.436      ;
+; 0.907 ; ir:ir_driver|receive[15]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 0.000        ; 0.360      ; 1.462      ;
+; 0.933 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.045      ; 1.173      ;
+; 0.947 ; ir:ir_driver|receive[4]   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.088      ; 1.230      ;
+; 0.979 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.036      ; 1.210      ;
+; 0.980 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.036      ; 1.211      ;
+; 0.982 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[3]   ; clock        ; clock       ; 0.000        ; 0.036      ; 1.213      ;
+; 0.982 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.036      ; 1.213      ;
+; 0.983 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.036      ; 1.214      ;
+; 1.015 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.282      ;
+; 1.016 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.283      ;
+; 1.018 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.285      ;
+; 1.019 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.286      ;
+; 1.026 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.293      ;
+; 1.027 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.294      ;
+; 1.030 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.297      ;
+; 1.033 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.300      ;
+; 1.034 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.301      ;
+; 1.034 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.301      ;
+; 1.034 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.301      ;
+; 1.035 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.302      ;
+; 1.036 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.303      ;
+; 1.041 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.308      ;
+; 1.043 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.310      ;
+; 1.046 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.313      ;
+; 1.047 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.314      ;
+; 1.048 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.315      ;
+; 1.049 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.316      ;
+; 1.051 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.318      ;
+; 1.058 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.325      ;
+; 1.061 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.328      ;
+; 1.062 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.329      ;
+; 1.063 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.330      ;
+; 1.063 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.330      ;
+; 1.064 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.331      ;
+; 1.064 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.331      ;
+; 1.068 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.335      ;
+; 1.069 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.336      ;
+; 1.077 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.344      ;
+; 1.077 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.344      ;
+; 1.078 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.345      ;
+; 1.078 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.345      ;
+; 1.079 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.346      ;
+; 1.098 ; ir:ir_driver|receive[9]   ; ir:ir_driver|command[1]   ; clock        ; clock       ; 0.000        ; 0.361      ; 1.654      ;
+; 1.110 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 0.000        ; 0.544      ; 1.849      ;
+; 1.112 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.379      ;
+; 1.127 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.394      ;
+; 1.129 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.396      ;
+; 1.132 ; ir:ir_driver|receive[13]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 0.000        ; 0.361      ; 1.688      ;
+; 1.137 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.404      ;
+; 1.138 ; ir:ir_driver|receive[6]   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 0.000        ; -0.376     ; 0.957      ;
+; 1.140 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.407      ;
+; 1.141 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.072      ; 1.408      ;
+; 1.147 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.414      ;
+; 1.148 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.415      ;
+; 1.149 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.416      ;
+; 1.149 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.072      ; 1.416      ;
+; 1.152 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.072      ; 1.419      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; ir:ir_driver|command[0] ; -1.994 ; -7.748        ;
+; clock                   ; -0.773 ; -22.033       ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; ir:ir_driver|command[0] ; -0.178 ; -0.413        ;
+; clock                   ; 0.179  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock                   ; -3.000 ; -62.345       ;
+; ir:ir_driver|command[0] ; 0.350  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ir:ir_driver|command[0]'                                                                                   ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; -1.994 ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.607      ;
+; -1.969 ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.586      ;
+; -1.962 ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.575      ;
+; -1.943 ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.571      ;
+; -1.938 ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.551      ;
+; -1.937 ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.554      ;
+; -1.913 ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.530      ;
+; -1.911 ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.539      ;
+; -1.904 ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.517      ;
+; -1.887 ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.515      ;
+; -1.879 ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.496      ;
+; -1.853 ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.481      ;
+; -1.842 ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.459      ;
+; -1.811 ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.428      ;
+; -1.810 ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.427      ;
+; -1.795 ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.408      ;
+; -1.786 ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.403      ;
+; -1.770 ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.387      ;
+; -1.764 ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.377      ;
+; -1.752 ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.369      ;
+; -1.751 ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.379      ;
+; -1.744 ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.372      ;
+; -1.739 ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.356      ;
+; -1.730 ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.572      ; 2.343      ;
+; -1.713 ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.574      ; 2.341      ;
+; -1.643 ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.260      ;
+; -1.612 ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.229      ;
+; -1.578 ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; 0.500        ; 0.575      ; 2.195      ;
+; -0.915 ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.025     ; 1.442      ;
+; -0.904 ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.022     ; 1.434      ;
+; -0.880 ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.028     ; 1.403      ;
+; -0.852 ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.023     ; 1.381      ;
+; -0.844 ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.023     ; 1.385      ;
+; -0.804 ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.026     ; 1.342      ;
+; -0.627 ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.025     ; 1.154      ;
+; -0.624 ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.025     ; 1.150      ;
+; -0.560 ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.024     ; 1.100      ;
+; -0.556 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 1.916      ; 2.629      ;
+; -0.546 ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; -0.025     ; 1.073      ;
+; -0.496 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 1.915      ; 2.580      ;
+; -0.348 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 1.913      ; 2.417      ;
+; -0.146 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.500        ; 1.916      ; 2.219      ;
+; 0.012  ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 1.916      ; 2.561      ;
+; 0.103  ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 1.913      ; 2.466      ;
+; 0.149  ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 1.915      ; 2.435      ;
+; 0.361  ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 1.000        ; 1.916      ; 2.212      ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clock'                                                                                                  ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -0.773 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.034     ; 1.726      ;
+; -0.772 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.720      ;
+; -0.726 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.674      ;
+; -0.711 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.038     ; 1.660      ;
+; -0.711 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.034     ; 1.664      ;
+; -0.709 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.038     ; 1.658      ;
+; -0.695 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.643      ;
+; -0.687 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.038     ; 1.636      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.636 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 1.000        ; -0.239     ; 1.384      ;
+; -0.635 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.583      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.621 ; ir:ir_driver|state.DATA   ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 1.000        ; -0.236     ; 1.372      ;
+; -0.615 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.563      ;
+; -0.613 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.753      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.592 ; ir:ir_driver|prev_ir      ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.701      ;
+; -0.591 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.731      ;
+; -0.576 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.038     ; 1.525      ;
+; -0.567 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.707      ;
+; -0.566 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.514      ;
+; -0.563 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.511      ;
+; -0.553 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.693      ;
+; -0.545 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.685      ;
+; -0.543 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.683      ;
+; -0.541 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.489      ;
+; -0.532 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.672      ;
+; -0.531 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.671      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.530 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.635      ;
+; -0.530 ; synchro:synchro_ir|sync_o ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.122      ; 1.639      ;
+; -0.529 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.669      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.528 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.633      ;
+; -0.524 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.472      ;
+; -0.524 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.664      ;
+; -0.522 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.470      ;
+; -0.521 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.661      ;
+; -0.516 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.464      ;
+; -0.511 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.459      ;
+; -0.510 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.650      ;
+; -0.507 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.647      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[4]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.506 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|command[1]   ; clock        ; clock       ; 1.000        ; 0.118      ; 1.611      ;
+; -0.502 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.642      ;
+; -0.491 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 1.000        ; 0.157      ; 1.635      ;
+; -0.480 ; ir:ir_driver|state.DATA   ; ir:ir_driver|command[0]   ; clock        ; clock       ; 1.000        ; -0.238     ; 1.229      ;
+; -0.475 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.615      ;
+; -0.474 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[15]  ; clock        ; clock       ; 1.000        ; -0.237     ; 1.224      ;
+; -0.473 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.613      ;
+; -0.464 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.604      ;
+; -0.462 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.602      ;
+; -0.456 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.596      ;
+; -0.455 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.403      ;
+; -0.455 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|err_flag     ; clock        ; clock       ; 1.000        ; 0.153      ; 1.595      ;
+; -0.442 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.582      ;
+; -0.440 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.580      ;
+; -0.434 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 1.000        ; -0.039     ; 1.382      ;
+; -0.434 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.574      ;
+; -0.433 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 1.000        ; 0.153      ; 1.573      ;
+; -0.432 ; ir:ir_driver|prev_ir      ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 1.000        ; -0.035     ; 1.384      ;
+; -0.432 ; ir:ir_driver|prev_ir      ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 1.000        ; -0.035     ; 1.384      ;
+; -0.432 ; ir:ir_driver|prev_ir      ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 1.000        ; -0.035     ; 1.384      ;
+; -0.432 ; ir:ir_driver|prev_ir      ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 1.000        ; -0.035     ; 1.384      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ir:ir_driver|command[0]'                                                                                    ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.178 ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 1.994      ; 1.921      ;
+; -0.104 ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 1.994      ; 1.995      ;
+; -0.102 ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 1.992      ; 1.995      ;
+; -0.029 ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 1.991      ; 2.067      ;
+; 0.256  ; ir:ir_driver|command[0] ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 1.994      ; 1.875      ;
+; 0.283  ; ir:ir_driver|command[0] ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 1.992      ; 1.900      ;
+; 0.333  ; ir:ir_driver|command[0] ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 1.994      ; 1.952      ;
+; 0.371  ; ir:ir_driver|command[0] ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; -0.500       ; 1.991      ; 1.987      ;
+; 0.887  ; led[2]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.024      ; 0.911      ;
+; 0.891  ; led[3]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.025      ; 0.916      ;
+; 0.963  ; led[1]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.025      ; 0.988      ;
+; 0.985  ; led[0]                  ; led[0]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.025      ; 1.010      ;
+; 1.027  ; led[1]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.026      ; 1.053      ;
+; 1.045  ; led[0]                  ; led[2]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.023      ; 1.068      ;
+; 1.052  ; led[2]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.026      ; 1.078      ;
+; 1.096  ; led[1]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.028      ; 1.124      ;
+; 1.114  ; led[0]                  ; led[3]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.025      ; 1.139      ;
+; 1.126  ; led[0]                  ; led[1]  ; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0.000        ; 0.022      ; 1.148      ;
+; 1.210  ; ir:ir_driver|command[4] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.444      ;
+; 1.273  ; ir:ir_driver|command[4] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.504      ;
+; 1.274  ; ir:ir_driver|command[4] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.506      ;
+; 1.287  ; ir:ir_driver|command[4] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.521      ;
+; 1.334  ; ir:ir_driver|command[6] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.568      ;
+; 1.344  ; ir:ir_driver|command[5] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.578      ;
+; 1.374  ; ir:ir_driver|command[1] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.608      ;
+; 1.384  ; ir:ir_driver|command[6] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.618      ;
+; 1.388  ; ir:ir_driver|command[7] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.622      ;
+; 1.391  ; ir:ir_driver|command[3] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.625      ;
+; 1.409  ; ir:ir_driver|command[6] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.641      ;
+; 1.416  ; ir:ir_driver|command[5] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.650      ;
+; 1.418  ; ir:ir_driver|command[3] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.650      ;
+; 1.420  ; ir:ir_driver|command[5] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.652      ;
+; 1.456  ; ir:ir_driver|command[3] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.687      ;
+; 1.460  ; ir:ir_driver|command[6] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.691      ;
+; 1.460  ; ir:ir_driver|command[7] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.694      ;
+; 1.464  ; ir:ir_driver|command[7] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.696      ;
+; 1.468  ; ir:ir_driver|command[3] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.702      ;
+; 1.474  ; ir:ir_driver|command[5] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.705      ;
+; 1.501  ; ir:ir_driver|command[1] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.733      ;
+; 1.514  ; ir:ir_driver|command[1] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.748      ;
+; 1.518  ; ir:ir_driver|command[7] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.749      ;
+; 1.552  ; ir:ir_driver|command[1] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.783      ;
+; 1.653  ; ir:ir_driver|command[2] ; led[2]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.702      ; 1.885      ;
+; 1.696  ; ir:ir_driver|command[2] ; led[0]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.930      ;
+; 1.739  ; ir:ir_driver|command[2] ; led[1]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.701      ; 1.970      ;
+; 1.765  ; ir:ir_driver|command[2] ; led[3]  ; clock                   ; ir:ir_driver|command[0] ; -0.500       ; 0.704      ; 1.999      ;
++--------+-------------------------+---------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clock'                                                                                                  ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.179 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; ir:ir_driver|err_flag     ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.044      ; 0.307      ;
+; 0.187 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.217 ; synchro:synchro_ir|sync_o ; ir:ir_driver|state.LEAD_9 ; clock        ; clock       ; 0.000        ; 0.036      ; 0.337      ;
+; 0.221 ; ir:ir_driver|cntr[18]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.341      ;
+; 0.247 ; ir:ir_driver|receive[1]   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.044      ; 0.375      ;
+; 0.253 ; ir:ir_driver|receive[7]   ; ir:ir_driver|receive[8]   ; clock        ; clock       ; 0.000        ; 0.036      ; 0.373      ;
+; 0.264 ; ir:ir_driver|receive[13]  ; ir:ir_driver|receive[14]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.384      ;
+; 0.264 ; ir:ir_driver|receive[9]   ; ir:ir_driver|receive[10]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.384      ;
+; 0.286 ; ir:ir_driver|receive[3]   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.044      ; 0.414      ;
+; 0.297 ; ir:ir_driver|data_cnt[5]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.417      ;
+; 0.299 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; ir:ir_driver|state.LEAD_9 ; ir:ir_driver|state.LEAD_4 ; clock        ; clock       ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.420      ;
+; 0.301 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.421      ;
+; 0.303 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.423      ;
+; 0.307 ; ir:ir_driver|receive[10]  ; ir:ir_driver|receive[11]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.427      ;
+; 0.308 ; ir:ir_driver|receive[11]  ; ir:ir_driver|receive[12]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; ir:ir_driver|receive[8]   ; ir:ir_driver|receive[9]   ; clock        ; clock       ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.428      ;
+; 0.309 ; ir:ir_driver|receive[12]  ; ir:ir_driver|receive[13]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.429      ;
+; 0.309 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.429      ;
+; 0.310 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.430      ;
+; 0.311 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[0]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.431      ;
+; 0.314 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.434      ;
+; 0.315 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.435      ;
+; 0.316 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.436      ;
+; 0.316 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[0]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.436      ;
+; 0.321 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.441      ;
+; 0.323 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.443      ;
+; 0.323 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.443      ;
+; 0.324 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.444      ;
+; 0.326 ; ir:ir_driver|receive[10]  ; ir:ir_driver|command[2]   ; clock        ; clock       ; 0.000        ; 0.216      ; 0.626      ;
+; 0.326 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.446      ;
+; 0.326 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.446      ;
+; 0.326 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.446      ;
+; 0.327 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.447      ;
+; 0.330 ; ir:ir_driver|receive[15]  ; ir:ir_driver|command[7]   ; clock        ; clock       ; 0.000        ; 0.214      ; 0.628      ;
+; 0.331 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.451      ;
+; 0.364 ; synchro:synchro_ir|sync_o ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.236      ; 0.684      ;
+; 0.375 ; synchro:synchro_ir|sync_o ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.236      ; 0.695      ;
+; 0.394 ; ir:ir_driver|receive[5]   ; ir:ir_driver|receive[6]   ; clock        ; clock       ; 0.000        ; 0.059      ; 0.537      ;
+; 0.400 ; ir:ir_driver|receive[0]   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.029      ; 0.513      ;
+; 0.409 ; ir:ir_driver|receive[4]   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.044      ; 0.537      ;
+; 0.433 ; ir:ir_driver|receive[9]   ; ir:ir_driver|command[1]   ; clock        ; clock       ; 0.000        ; 0.216      ; 0.733      ;
+; 0.437 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[2]   ; clock        ; clock       ; 0.000        ; 0.025      ; 0.546      ;
+; 0.438 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[5]   ; clock        ; clock       ; 0.000        ; 0.025      ; 0.547      ;
+; 0.439 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[3]   ; clock        ; clock       ; 0.000        ; 0.025      ; 0.548      ;
+; 0.440 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[4]   ; clock        ; clock       ; 0.000        ; 0.025      ; 0.549      ;
+; 0.440 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[1]   ; clock        ; clock       ; 0.000        ; 0.025      ; 0.549      ;
+; 0.448 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.568      ;
+; 0.449 ; ir:ir_driver|receive[13]  ; ir:ir_driver|command[5]   ; clock        ; clock       ; 0.000        ; 0.216      ; 0.749      ;
+; 0.452 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.572      ;
+; 0.456 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.576      ;
+; 0.457 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; ir:ir_driver|data_cnt[4]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[1]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.578      ;
+; 0.459 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.579      ;
+; 0.461 ; ir:ir_driver|data_cnt[0]  ; ir:ir_driver|data_cnt[2]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.581      ;
+; 0.462 ; ir:ir_driver|data_cnt[2]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.582      ;
+; 0.463 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[1]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; ir:ir_driver|cntr[5]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.583      ;
+; 0.465 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; ir:ir_driver|cntr[13]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.585      ;
+; 0.466 ; ir:ir_driver|cntr[0]      ; ir:ir_driver|cntr[2]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.586      ;
+; 0.467 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[9]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.587      ;
+; 0.468 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[11]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; ir:ir_driver|cntr[2]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.588      ;
+; 0.470 ; ir:ir_driver|cntr[7]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.590      ;
+; 0.470 ; ir:ir_driver|cntr[8]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.590      ;
+; 0.471 ; ir:ir_driver|cntr[10]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.591      ;
+; 0.472 ; ir:ir_driver|cntr[17]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.592      ;
+; 0.473 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.593      ;
+; 0.473 ; ir:ir_driver|cntr[9]      ; ir:ir_driver|cntr[10]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.593      ;
+; 0.476 ; ir:ir_driver|cntr[15]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.596      ;
+; 0.476 ; ir:ir_driver|cntr[4]      ; ir:ir_driver|cntr[6]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.596      ;
+; 0.480 ; ir:ir_driver|cntr[11]     ; ir:ir_driver|cntr[12]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.600      ;
+; 0.481 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[17]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.601      ;
+; 0.484 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[13]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.604      ;
+; 0.484 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[7]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.604      ;
+; 0.484 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[15]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.604      ;
+; 0.484 ; ir:ir_driver|cntr[16]     ; ir:ir_driver|cntr[18]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.604      ;
+; 0.486 ; ir:ir_driver|receive[6]   ; ir:ir_driver|receive[7]   ; clock        ; clock       ; 0.000        ; -0.155     ; 0.415      ;
+; 0.487 ; ir:ir_driver|cntr[12]     ; ir:ir_driver|cntr[14]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.607      ;
+; 0.487 ; ir:ir_driver|cntr[6]      ; ir:ir_driver|cntr[8]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.607      ;
+; 0.487 ; ir:ir_driver|cntr[14]     ; ir:ir_driver|cntr[16]     ; clock        ; clock       ; 0.000        ; 0.036      ; 0.607      ;
+; 0.501 ; ir:ir_driver|state.LEAD_4 ; ir:ir_driver|state.DATA   ; clock        ; clock       ; 0.000        ; 0.240      ; 0.825      ;
+; 0.504 ; ir:ir_driver|receive[11]  ; ir:ir_driver|command[3]   ; clock        ; clock       ; 0.000        ; 0.216      ; 0.804      ;
+; 0.505 ; ir:ir_driver|receive[8]   ; ir:ir_driver|command[0]   ; clock        ; clock       ; 0.000        ; 0.045      ; 0.634      ;
+; 0.511 ; ir:ir_driver|data_cnt[3]  ; ir:ir_driver|data_cnt[5]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.631      ;
+; 0.515 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[3]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.635      ;
+; 0.516 ; ir:ir_driver|state.DATA   ; ir:ir_driver|receive[0]   ; clock        ; clock       ; 0.000        ; 0.040      ; 0.640      ;
+; 0.516 ; ir:ir_driver|state.DATA   ; ir:ir_driver|err_flag     ; clock        ; clock       ; 0.000        ; 0.040      ; 0.640      ;
+; 0.518 ; ir:ir_driver|cntr[1]      ; ir:ir_driver|cntr[4]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.638      ;
+; 0.519 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[3]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.639      ;
+; 0.520 ; ir:ir_driver|receive[14]  ; ir:ir_driver|command[6]   ; clock        ; clock       ; 0.000        ; 0.216      ; 0.820      ;
+; 0.520 ; ir:ir_driver|cntr[3]      ; ir:ir_driver|cntr[5]      ; clock        ; clock       ; 0.000        ; 0.036      ; 0.640      ;
+; 0.522 ; ir:ir_driver|data_cnt[1]  ; ir:ir_driver|data_cnt[4]  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.642      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++-----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                     ;
++--------------------------+----------+--------+----------+---------+---------------------+
+; Clock                    ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack         ; -5.448   ; -0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clock                   ; -3.084   ; 0.179  ; N/A      ; N/A     ; -3.000              ;
+;  ir:ir_driver|command[0] ; -5.448   ; -0.178 ; N/A      ; N/A     ; 0.175               ;
+; Design-wide TNS          ; -146.353 ; -0.413 ; 0.0      ; 0.0     ; -86.272             ;
+;  clock                   ; -125.061 ; 0.000  ; N/A      ; N/A     ; -86.272             ;
+;  ir:ir_driver|command[0] ; -21.292  ; -0.413 ; N/A      ; N/A     ; 0.000               ;
++--------------------------+----------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; led_n[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led_n[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led_n[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led_n[3]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset_n                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ir                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; led_n[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; led_n[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; led_n[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; led_n[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; led_n[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; led_n[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; led_n[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clock                   ; clock                   ; 685      ; 0        ; 0        ; 0        ;
+; clock                   ; ir:ir_driver|command[0] ; 0        ; 0        ; 256      ; 0        ;
+; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0        ; 0        ; 33       ; 43       ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clock                   ; clock                   ; 685      ; 0        ; 0        ; 0        ;
+; clock                   ; ir:ir_driver|command[0] ; 0        ; 0        ; 256      ; 0        ;
+; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; 0        ; 0        ; 33       ; 43       ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 55    ; 55   ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------+
+; Clock Status Summary                                                   ;
++-------------------------+-------------------------+------+-------------+
+; Target                  ; Clock                   ; Type ; Status      ;
++-------------------------+-------------------------+------+-------------+
+; clock                   ; clock                   ; Base ; Constrained ;
+; ir:ir_driver|command[0] ; ir:ir_driver|command[0] ; Base ; Constrained ;
++-------------------------+-------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ir         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_n    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led_n[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ir         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_n    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led_n[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led_n[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 11 19:10:07 2022
+Info: Command: quartus_sta traba_2_vlsi -c traba_2_vlsi_top
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'traba_2_vlsi_top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name ir:ir_driver|command[0] ir:ir_driver|command[0]
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.448
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.448             -21.292 ir:ir_driver|command[0] 
+    Info (332119):    -3.084            -125.061 clock 
+Info (332146): Worst-case hold slack is -0.061
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.061              -0.095 ir:ir_driver|command[0] 
+    Info (332119):     0.434               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -86.272 clock 
+    Info (332119):     0.345               0.000 ir:ir_driver|command[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.268
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.268             -20.615 ir:ir_driver|command[0] 
+    Info (332119):    -2.881            -113.067 clock 
+Info (332146): Worst-case hold slack is 0.014
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.014               0.000 ir:ir_driver|command[0] 
+    Info (332119):     0.384               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -86.272 clock 
+    Info (332119):     0.175               0.000 ir:ir_driver|command[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.994
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.994              -7.748 ir:ir_driver|command[0] 
+    Info (332119):    -0.773             -22.033 clock 
+Info (332146): Worst-case hold slack is -0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.178              -0.413 ir:ir_driver|command[0] 
+    Info (332119):     0.179               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -62.345 clock 
+    Info (332119):     0.350               0.000 ir:ir_driver|command[0] 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Fri Nov 11 19:10:10 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

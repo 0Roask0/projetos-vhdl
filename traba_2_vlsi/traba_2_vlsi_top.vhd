@@ -9,7 +9,6 @@ entity traba_2_vlsi_top is
 
         ir		: in std_logic;
 
-        btn_n: in std_logic;
         led_n: out std_logic_vector(3 downto 0)
 
     );
@@ -18,93 +17,56 @@ end traba_2_vlsi_top;
 
 architecture traba_2_vlsi_top of traba_2_vlsi_top is
 
-    signal btn_n_sync: std_logic;
     signal reset: std_logic;
-
-    signal btn1_sync: std_logic;
-    signal btn2_sync: std_logic;
-    signal btn3_sync: std_logic;
 
     signal led: std_logic_vector(3 downto 0);
 
-    signal btn1_deb : std_logic;
-    signal btn2_deb : std_logic;
-    signal btn3_deb : std_logic;
-
     signal buzzer_en : std_logic;
-	 signal buzzer_o : std_logic;
-    signal ver : std_logic;
+	signal buzzer_o : std_logic;
+    signal ver : std_logic_vector(3 downto 0);
 
     signal cnt : std_logic_vector(3 downto 0);
     signal div : std_logic_vector(20 downto 0);
 	signal ir_sync : std_logic;
 	signal intr : std_logic;
-	signal dig : std_logic_vector(3 downto 0);
 	signal command : std_logic_vector(7 downto 0);
-	signal acionou : std_logic;
+    signal par : std_logic;
 begin
 	reset <= not reset_n;
 	led_n <= not led;
-	process(clock, reset)
-	begin
-		if(reset = '1') then
-			led <= (others => '0');
-		elsif(rising_edge(clock)) then
-			if(intr = '1') then
-				led <= dig;
-			end if;
-		end if;
-	end process;
 
 	process(command)
 	begin
 		case command is
-			when x"68" => dig <= "0001";
-			when x"30" => dig <= "0010";
-			when x"18" => dig <= "0011";
-			when x"7A" => dig <= "0100";
-			when x"10" => dig <= "0101";
-			when x"38" => dig <= "0110";
-			when x"5A" => dig <= "0111";
-			when x"42" => dig <= "1000";
-			when x"4A" => dig <= "1001";
-			when x"52" => dig <= "1010";
-			when x"C2" => dig <= "1111";
-			when others => dig <= (others => '1');
+			when x"68" => cnt <= "0000";
+			when x"30" => cnt <= "0001";
+			when x"18" => cnt <= "0010";
+			when x"7A" => cnt <= "0011";
+			when x"10" => cnt <= "0100";
+			when x"38" => cnt <= "0101";
+			when x"5A" => cnt <= "0110";
+			when x"42" => cnt <= "0111";
+			when x"4A" => cnt <= "1000";
+			when x"52" => cnt <= "1001";
+			when others => cnt <= "1111";
 		end case;
-	
-
-		if dig = "1111" then
-			case command is
-				when x"68" => dig <= "0001";
-				when x"30" => dig <= "0010";
-				when x"18" => dig <= "0011";
-				when x"7A" => dig <= "0100";
-				when x"10" => dig <= "0101";
-				when x"38" => dig <= "0110";
-				when x"5A" => dig <= "0111";
-				when x"42" => dig <= "1000";
-				when x"4A" => dig <= "1001";
-				when x"52" => dig <= "1010";
-				when x"C2" => dig <= "1111";
-				when others => dig <= (others => '0');
-			end case;
-		end if;
-
-		if command = X"C2" then
-			buzzer_en <= '1';
-			acionou <= '1';
-		elsif command = X"C2" and acionou = '1' then
-			buzzer_en <= '1';
-            acionou <= '0';
-		end if;
-
-		if command = X"E0" then
-			dig <= dig - '1';
-		elsif command = X"A8" then
-			dig <= dig + '1';
-		end if;
-
+    end process;
+	 
+    process(clock, reset)
+    begin
+        if cnt = "1111" then 
+            case command is
+                when x"E0" => 
+                    led <= led - '1';
+                when x"A8" => 
+                    led <= led + '1';
+                when x"C2" => 
+                    buzzer_en <= not buzzer_en;
+                when others => led <= "1111";
+            end case;
+        else
+            led <= cnt;
+        end if;
 	end process;
 
     process(cnt)
@@ -126,6 +88,7 @@ begin
         when "1101" => div <= "000000010011100010000";
         when "1110" => div <= "000000001001110001000";   
         when "1111" => div <= "000000000010011100010"; 
+		when others => div <= (others => '0');
     end case;
 	end process;
 

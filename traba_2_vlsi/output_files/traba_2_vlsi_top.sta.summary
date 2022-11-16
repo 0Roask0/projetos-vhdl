@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ir:ir_driver|command[0]'
+Slack : -5.448
+TNS   : -21.292
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -3.084
+TNS   : -125.061
+
+Type  : Slow 1200mV 85C Model Hold 'ir:ir_driver|command[0]'
+Slack : -0.061
+TNS   : -0.095
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -86.272
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ir:ir_driver|command[0]'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ir:ir_driver|command[0]'
+Slack : -5.268
+TNS   : -20.615
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -2.881
+TNS   : -113.067
+
+Type  : Slow 1200mV 0C Model Hold 'ir:ir_driver|command[0]'
+Slack : 0.014
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -86.272
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ir:ir_driver|command[0]'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ir:ir_driver|command[0]'
+Slack : -1.994
+TNS   : -7.748
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -0.773
+TNS   : -22.033
+
+Type  : Fast 1200mV 0C Model Hold 'ir:ir_driver|command[0]'
+Slack : -0.178
+TNS   : -0.413
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -62.345
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ir:ir_driver|command[0]'
+Slack : 0.350
+TNS   : 0.000
+
+------------------------------------------------------------

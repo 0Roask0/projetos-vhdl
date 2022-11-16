@@ -1,5 +1,5 @@
 Analysis & Synthesis report for traba_2_vlsi_top
-Thu Nov 10 21:51:38 2022
+Fri Nov 11 19:13:25 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 10 21:51:38 2022           ;
+; Analysis & Synthesis Status        ; Failed - Fri Nov 11 19:13:25 2022           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; traba_2_vlsi_top                            ;
 ; Top-level Entity Name              ; traba_2_vlsi_top                            ;
@@ -146,7 +146,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,40 +162,51 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 10 21:51:30 2022
+    Info: Processing started: Fri Nov 11 19:13:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traba_2_vlsi -c traba_2_vlsi_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file traba_2_vlsi_top.vhd
-    Info (12022): Found design unit 1: traba_2_vlsi_top-traba_2_vlsi_top File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 19
-    Info (12023): Found entity 1: traba_2_vlsi_top File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 5
+    Info (12022): Found design unit 1: traba_2_vlsi_top-traba_2_vlsi_top File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 18
+    Info (12023): Found entity 1: traba_2_vlsi_top File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file traba_2_vlsi.vhd
-    Info (12022): Found design unit 1: traba_2_vlsi-traba_2_vlsi File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi.vhd Line: 17
-    Info (12023): Found entity 1: traba_2_vlsi File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi.vhd Line: 5
+    Info (12022): Found design unit 1: traba_2_vlsi-traba_2_vlsi File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi.vhd Line: 17
+    Info (12023): Found entity 1: traba_2_vlsi File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file synchro.vhd
-    Info (12022): Found design unit 1: synchro-synchro File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/synchro.vhd Line: 16
-    Info (12023): Found entity 1: synchro File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/synchro.vhd Line: 5
+    Info (12022): Found design unit 1: synchro-synchro File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/synchro.vhd Line: 16
+    Info (12023): Found entity 1: synchro File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/synchro.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
-    Info (12022): Found design unit 1: ir-rlt File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/ir.vhd Line: 17
-    Info (12023): Found entity 1: ir File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/ir.vhd Line: 5
+    Info (12022): Found design unit 1: ir-rlt File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/ir.vhd Line: 17
+    Info (12023): Found entity 1: ir File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/ir.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file buzzer.vhd
-    Info (12022): Found design unit 1: buzzer-buzzer File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/buzzer.vhd Line: 16
-    Info (12023): Found entity 1: buzzer File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/buzzer.vhd Line: 5
+    Info (12022): Found design unit 1: buzzer-buzzer File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/buzzer.vhd Line: 16
+    Info (12023): Found entity 1: buzzer File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/buzzer.vhd Line: 5
 Info (12127): Elaborating entity "traba_2_vlsi_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at traba_2_vlsi_top.vhd(35): object "buzzer_o" assigned a value but never read File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 35
-Warning (10541): VHDL Signal Declaration warning at traba_2_vlsi_top.vhd(38): used implicit default value for signal "cnt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(77): signal "dig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(97): signal "acionou" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(103): signal "dig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 103
-Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(105): signal "dig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 105
-Warning (10631): VHDL Process Statement warning at traba_2_vlsi_top.vhd(59): inferring latch(es) for signal or variable "buzzer_en", which holds its previous value in one or more paths through the process File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at traba_2_vlsi_top.vhd(59): inferring latch(es) for signal or variable "acionou", which holds its previous value in one or more paths through the process File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 59
-Error (10313): VHDL Case Statement error at traba_2_vlsi_top.vhd(112): Case Statement choices must cover all possible values of expression File: D:/Projetos vhdl/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 112
+Warning (10036): Verilog HDL or VHDL warning at traba_2_vlsi_top.vhd(25): object "buzzer_o" assigned a value but never read File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at traba_2_vlsi_top.vhd(31): object "intr" assigned a value but never read File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(58): signal "cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(59): signal "command" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(61): signal "led" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(63): signal "led" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(65): signal "buzzer_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at traba_2_vlsi_top.vhd(69): signal "cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 69
+Warning (10631): VHDL Process Statement warning at traba_2_vlsi_top.vhd(56): inferring latch(es) for signal or variable "led", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Warning (10631): VHDL Process Statement warning at traba_2_vlsi_top.vhd(56): inferring latch(es) for signal or variable "buzzer_en", which holds its previous value in one or more paths through the process File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Info (10041): Inferred latch for "buzzer_en" at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Info (10041): Inferred latch for "led[0]" at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Info (10041): Inferred latch for "led[1]" at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Info (10041): Inferred latch for "led[2]" at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Info (10041): Inferred latch for "led[3]" at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Error (10028): Can't resolve multiple constant drivers for net "led[3]" at traba_2_vlsi_top.vhd(38) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 38
+Error (10029): Constant driver at traba_2_vlsi_top.vhd(56) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 56
+Error (10028): Can't resolve multiple constant drivers for net "led[2]" at traba_2_vlsi_top.vhd(38) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 38
+Error (10028): Can't resolve multiple constant drivers for net "led[1]" at traba_2_vlsi_top.vhd(38) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 38
+Error (10028): Can't resolve multiple constant drivers for net "led[0]" at traba_2_vlsi_top.vhd(38) File: C:/Users/Usuario/OneDrive/Documentos/Meuprojetoaula1/projetos-vhdl/traba_2_vlsi/traba_2_vlsi_top.vhd Line: 38
 Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 9 warnings
-    Error: Peak virtual memory: 4775 megabytes
-    Error: Processing ended: Thu Nov 10 21:51:38 2022
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:20
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 11 warnings
+    Error: Peak virtual memory: 4771 megabytes
+    Error: Processing ended: Fri Nov 11 19:13:25 2022
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:29
 
 
