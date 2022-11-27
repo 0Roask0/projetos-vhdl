@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-Fitter Status : Successful - Thu Nov 10 01:09:53 2022
-=======
-Fitter Status : Successful - Tue Nov 08 20:40:37 2022
->>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
+Fitter Status : Successful - Wed Nov 16 19:43:50 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : traba_2_top
 Top-level Entity Name : traba_2_top
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-<<<<<<< HEAD
-Total logic elements : 105 / 6,272 ( 2 % )
-    Total combinational functions : 102 / 6,272 ( 2 % )
-    Dedicated logic registers : 80 / 6,272 ( 1 % )
-Total registers : 80
-Total pins : 9 / 92 ( 10 % )
-=======
-Total logic elements : 72 / 6,272 ( 1 % )
-    Total combinational functions : 69 / 6,272 ( 1 % )
-    Dedicated logic registers : 54 / 6,272 ( < 1 % )
-Total registers : 54
+Total logic elements : 100 / 6,272 ( 2 % )
+    Total combinational functions : 98 / 6,272 ( 2 % )
+    Dedicated logic registers : 76 / 6,272 ( 1 % )
+Total registers : 76
 Total pins : 10 / 92 ( 11 % )
->>>>>>> 6d39288bb1924b2e86b197142d2c523030e9cd4d
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
