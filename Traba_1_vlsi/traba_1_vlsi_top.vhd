@@ -7,8 +7,15 @@ entity traba_1_vlsi_top is
         clock: in std_logic;
         reset_n: in std_logic;
 
-        btn_n: in std_logic;
-        led_n: out std_logic_vector(3 downto 0)
+        btn1_n: in std_logic;
+        btn2_n: in std_logic;
+        btn3_n: in std_logic;
+
+        para : in std_logic;
+
+        led_n: out std_logic_vector(3 downto 0);
+        buzzer_o: out std_logic
+        
 
     );
 
@@ -16,7 +23,10 @@ end traba_1_vlsi_top;
 
 architecture traba_1_vlsi_top of traba_1_vlsi_top is
 
-    signal btn_n_sync: std_logic;
+    signal btn1_n_sync: std_logic;
+    signal btn2_n_sync: std_logic;
+    signal btn3_n_sync: std_logic;
+    
     signal reset: std_logic;
 
     signal btn1_sync: std_logic;
@@ -30,61 +40,85 @@ architecture traba_1_vlsi_top of traba_1_vlsi_top is
     signal btn3_deb : std_logic;
 
     signal buzzer_en : std_logic;
-    signal ver : std_logic;
 
-    signal cnt : std_logic_vector(15 downto 0);
+
+    signal cnt : std_logic_vector(3 downto 0);
     signal div : std_logic_vector(20 downto 0);
 
 begin 
+
+	cnt <= led;
+	
     process(cnt)
     begin
         case cnt is 
-        when "0000" => div <= "100110001001011010000"
-        when "0001" => div <= "11110100001001000000"
-        when "0010" => div <= "11011011101110100000"
-        when "0011" => div <= "11000011010100000000"
-        when "0100" => div <= "10101010111001100000"
-        when "0101" => div <= "10010010011111000000"
-        when "0110" => div <= "01111010000100100000"
-        when "0111" => div <= "01100001101010000000"
-        when "1000" => div <= "01001001001111100000"
-        when "1001" => div <= "00110000110101000000"
-        when "1010" => div <= "00011000011010100000"
-        when "1011" => div <= "00001100001101010000"
-        when "1100" => div <= "00000110000110101000"
-        when "1101" => div <= "00000010011100010000"
-        when "1110" => div <= "00000001001110001000"   
-        when "1111" => div <= "00000000010011100010" 
-    end case;
-begin 
-        process(clock)
-        begin 
-            if btn2_deb = '1' then 
-                en = '1';
-            elsif btn3_deb = '1' then
-                bruzzer_en ='0';
-            end if;
-        end process;
+        when "0000" => div <= "100110001001011010000";
+        when "0001" => div <= "011110100001001000000";
+        when "0010" => div <= "011011011101110100000";
+        when "0011" => div <= "011000011010100000000";
+        when "0100" => div <= "010101010111001100000";
+        when "0101" => div <= "010010010011111000000";
+        when "0110" => div <= "001111010000100100000";
+        when "0111" => div <= "001100001101010000000";
+        when "1000" => div <= "001001001001111100000";
+        when "1001" => div <= "000110000110101000000";
+        when "1010" => div <= "000011000011010100000";
+        when "1011" => div <= "000001100001101010000";
+        when "1100" => div <= "000000110000110101000";
+        when "1101" => div <= "000000010011100010000";
+        when "1110" => div <= "000000001001110001000";   
+        when "1111" => div <= "000000000010011100010";
+        end case;
+    end process;
 
-begin
     reset <= not reset_n;
-    btn_sync <= not btn_n_sync;
+    btn1_sync <= not btn1_n_sync;
+    btn2_sync <= not btn2_n_sync;
+    btn3_sync <= not btn3_n_sync;
     led_n <= not led;
+
+
+
+    process(clock, reset)
+        begin 
+            if reset ='1' then 
+                buzzer_en <= '0';
+
+            elsif rising_edge(clock) then 
+                if btn2_deb = '1' then 
+                    buzzer_en <= '1';
+                elsif btn3_deb = '1' then
+                    buzzer_en <='0';
+                end if;
+            end if;
+    end process;
     
-    synchro_btn : entity work.synchro
+    synchro1_btn : entity work.synchro
     port map(
         clock => clock,
-        async_i => btn_n,
-        sync_o => btn_n_sync
+        async_i => btn1_n,
+        sync_o => btn1_n_sync
+    );
+
+    synchro2_btn : entity work.synchro
+    port map(
+        clock => clock,
+        async_i => btn2_n,
+        sync_o => btn2_n_sync
+    );
+
+    synchro3_btn : entity work.synchro
+    port map(
+        clock => clock,
+        async_i => btn3_n,
+        sync_o => btn3_n_sync
     );
 
     traba_1_vlsi : entity work.traba_1_vlsi
     port map(
         clock => clock,
         reset => reset,
-        btn => btn_deb,
-        btn2 => btn2_deb,
-        btn3 => btn3_deb,
+        btn1 => btn1_deb,
         led => led
     );
 

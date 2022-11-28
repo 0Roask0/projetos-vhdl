@@ -7,9 +7,8 @@ entity traba_1_vlsi is
         clock: in std_logic;
         reset: in std_logic;
 
-        btn: in std_logic;
-        btn2: in std_logic;
-        btn3: in std_logic;
+        btn1: in std_logic;
+
         led: out std_logic_vector(3 downto 0)
 
     );
@@ -23,17 +22,16 @@ architecture traba_1_vlsi of traba_1_vlsi is
     
 begin
     led <= cnt;
-    process(clock, reset, pressed)
+    process(clock, reset)
     begin
         if reset = '1' then
             cnt <= (others => '0');
             pressed <= '0';
         elsif rising_edge(clock) then
-
-            if btn = '1' and pressed = '0' then
+            if btn1 = '1' and pressed = '0' then
                 cnt <= cnt +'1';
                 pressed<= '1';
-            elsif btn = '0' and pressed = '1' then
+            elsif btn1 = '0' and pressed = '1' then
                 pressed <= '0';
             end if;
 

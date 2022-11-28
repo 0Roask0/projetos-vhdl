@@ -1,0 +1,158 @@
+|traba_1_vlsi_top
+clock => synchro:synchro1_btn.clock
+clock => buzzer_en.CLK
+clock => synchro:synchro2_btn.clock
+clock => synchro:synchro3_btn.clock
+clock => traba_1_vlsi:traba_1_vlsi.clock
+clock => debounce:debounce_1.clock
+clock => debounce:debounce_2.clock
+clock => debounce:debounce_3.clock
+clock => buzzer:buzzer.clock
+reset_n => buzzer_en.ACLR
+reset_n => traba_1_vlsi:traba_1_vlsi.reset
+reset_n => debounce:debounce_1.reset
+reset_n => debounce:debounce_2.reset
+reset_n => debounce:debounce_3.reset
+reset_n => buzzer:buzzer.reset
+btn1_n => synchro:synchro1_btn.async_i
+btn2_n => synchro:synchro2_btn.async_i
+btn3_n => synchro:synchro3_btn.async_i
+para => ~NO_FANOUT~
+led_n[0] <= traba_1_vlsi:traba_1_vlsi.led[0]
+led_n[1] <= traba_1_vlsi:traba_1_vlsi.led[1]
+led_n[2] <= traba_1_vlsi:traba_1_vlsi.led[2]
+led_n[3] <= traba_1_vlsi:traba_1_vlsi.led[3]
+buzzer_o <= buzzer:buzzer.buzz
+
+
+|traba_1_vlsi_top|synchro:synchro1_btn
+clock => sync_o~reg0.CLK
+clock => sig.CLK
+async_i => sig.DATAIN
+sync_o <= sync_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|synchro:synchro2_btn
+clock => sync_o~reg0.CLK
+clock => sig.CLK
+async_i => sig.DATAIN
+sync_o <= sync_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|synchro:synchro3_btn
+clock => sync_o~reg0.CLK
+clock => sig.CLK
+async_i => sig.DATAIN
+sync_o <= sync_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|traba_1_vlsi:traba_1_vlsi
+clock => pressed.CLK
+clock => cnt[0].CLK
+clock => cnt[1].CLK
+clock => cnt[2].CLK
+clock => cnt[3].CLK
+reset => pressed.ACLR
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+btn1 => process_0.IN1
+btn1 => process_0.IN1
+led[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|debounce:debounce_1
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+bounce_i => ~NO_FANOUT~
+debounce_o <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|debounce:debounce_2
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+bounce_i => ~NO_FANOUT~
+debounce_o <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|debounce:debounce_3
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+bounce_i => ~NO_FANOUT~
+debounce_o <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traba_1_vlsi_top|buzzer:buzzer
+clock => square.CLK
+clock => cnt[0].CLK
+clock => cnt[1].CLK
+clock => cnt[2].CLK
+clock => cnt[3].CLK
+clock => cnt[4].CLK
+clock => cnt[5].CLK
+clock => cnt[6].CLK
+clock => cnt[7].CLK
+clock => cnt[8].CLK
+clock => cnt[9].CLK
+clock => cnt[10].CLK
+clock => cnt[11].CLK
+clock => cnt[12].CLK
+clock => cnt[13].CLK
+clock => cnt[14].CLK
+clock => cnt[15].CLK
+clock => cnt[16].CLK
+clock => cnt[17].CLK
+clock => cnt[18].CLK
+clock => cnt[19].CLK
+clock => cnt[20].CLK
+reset => square.ACLR
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+reset => cnt[4].ACLR
+reset => cnt[5].ACLR
+reset => cnt[6].ACLR
+reset => cnt[7].ACLR
+reset => cnt[8].ACLR
+reset => cnt[9].ACLR
+reset => cnt[10].ACLR
+reset => cnt[11].ACLR
+reset => cnt[12].ACLR
+reset => cnt[13].ACLR
+reset => cnt[14].ACLR
+reset => cnt[15].ACLR
+reset => cnt[16].ACLR
+reset => cnt[17].ACLR
+reset => cnt[18].ACLR
+reset => cnt[19].ACLR
+reset => cnt[20].ACLR
+in_div[0] => Equal0.IN20
+in_div[1] => Equal0.IN19
+in_div[2] => Equal0.IN18
+in_div[3] => Equal0.IN17
+in_div[4] => Equal0.IN16
+in_div[5] => Equal0.IN15
+in_div[6] => Equal0.IN14
+in_div[7] => Equal0.IN13
+in_div[8] => Equal0.IN12
+in_div[9] => Equal0.IN11
+in_div[10] => Equal0.IN10
+in_div[11] => Equal0.IN9
+in_div[12] => Equal0.IN8
+in_div[13] => Equal0.IN7
+in_div[14] => Equal0.IN6
+in_div[15] => Equal0.IN5
+in_div[16] => Equal0.IN4
+in_div[17] => Equal0.IN3
+in_div[18] => Equal0.IN2
+in_div[19] => Equal0.IN1
+in_div[20] => Equal0.IN0
+en => buzz.IN1
+buzz <= buzz.DB_MAX_OUTPUT_PORT_TYPE
+
+

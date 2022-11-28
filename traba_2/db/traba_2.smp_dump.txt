@@ -1,5 +1,5 @@
 
-State Machine - |traba_2_top|controle:controle|FSM
+State Machine - |traba_2_top|FSM
 Name FSM.fim FSM.espera FSM.apita FSM.aguard 
 FSM.aguard 0 0 0 0 
 FSM.apita 0 0 1 1 
