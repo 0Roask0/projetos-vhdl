@@ -50,6 +50,8 @@ architecture traba_2_top of traba_2_top is
     signal blockbtn3 : std_logic;
 
     signal pressed : std_logic;
+    signal pressed2 : std_logic;
+    signal pressed3 : std_logic;
     signal div : std_logic_vector(20 downto 0);
     signal num: std_logic_vector(3 downto 0);
 
@@ -74,6 +76,8 @@ begin
             if btn1_deb = '1' and pressed = '0' then
                 led <= led + '1';
                 pressed<= '1';
+            elsif btn1_deb = '1' and pressed = '1' then 
+                led <= led;
             elsif btn1_deb = '0' and pressed = '1' then
                 pressed <= '0';
             end if;
