@@ -10,13 +10,13 @@ z2
 cModel Technology
 Z0 dD:/Projetos vhdl/traba_3
 Edivisor
-Z1 w1670389751
+Z1 w1670424769
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 71
+!i122 88
 R0
 Z7 8divisor.vhd
 Z8 Fdivisor.vhd
@@ -26,9 +26,9 @@ V_aM_PmHEVaRQQD;n58_`R1
 !s100 6SBY;K:PO9em<7_OG86_z0
 Z9 OV;C;2020.1;71
 32
-Z10 !s110 1670389762
+Z10 !s110 1670424775
 !i10b 1
-Z11 !s108 1670389762.000000
+Z11 !s108 1670424775.000000
 Z12 !s90 -reportprogress|300|-work|work|divisor.vhd|
 Z13 !s107 divisor.vhd|
 !i113 1
@@ -41,11 +41,11 @@ R4
 R5
 R6
 Z16 DEx4 work 7 divisor 0 22 _aM_PmHEVaRQQD;n58_`R1
-!i122 71
+!i122 88
 l31
 L23 48
-V73^fa:R<>=NiJkoiBGdC:2
-!s100 1CkQ_iDIc6TPYld3NOL:R0
+VMKDbKhCcU[`VS3a?K^WDW1
+!s100 d7BgQ6a6<TeQ:B1@3<e753
 R9
 32
 R10
@@ -57,10 +57,10 @@ R13
 R14
 R15
 Etestbench
-Z17 w1670384666
+Z17 w1670423897
 R5
 R6
-!i122 73
+!i122 90
 R0
 Z18 8testbench.vhd
 Z19 Ftestbench.vhd
@@ -86,11 +86,11 @@ Z22 DEx4 work 7 traba_2 0 22 G17J`dTck7L0b4<jzSW9K2
 R5
 R6
 Z23 DEx4 work 9 testbench 0 22 W8gd1g0]gX0>z]E?<bY`C0
-!i122 73
+!i122 90
 l18
-Z24 L7 111
-Z25 VgTY_nFbB;]la[Gai6fC8T2
-Z26 !s100 T?iQLK7kOzO:T<eLA]A261
+L7 56
+VITcdd6VMPc=zF:3aLa3l02
+!s100 Kgee:6AHD>b97k>698z=G0
 R9
 32
 R10
@@ -102,16 +102,16 @@ R21
 R14
 R15
 Etraba_2
-Z27 w1670371969
+Z24 w1670424718
 R2
 R3
 R4
 R5
 R6
-!i122 72
+!i122 89
 R0
-Z28 8traba_2.vhd
-Z29 Ftraba_2.vhd
+Z25 8traba_2.vhd
+Z26 Ftraba_2.vhd
 l0
 L7 1
 VG17J`dTck7L0b4<jzSW9K2
@@ -121,8 +121,8 @@ R9
 R10
 !i10b 1
 R11
-Z30 !s90 -reportprogress|300|-work|work|traba_2.vhd|
-Z31 !s107 traba_2.vhd|
+Z27 !s90 -reportprogress|300|-work|work|traba_2.vhd|
+Z28 !s107 traba_2.vhd|
 !i113 1
 R14
 R15
@@ -134,18 +134,18 @@ R4
 R5
 R6
 R22
-!i122 72
+!i122 89
 l32
-L21 76
-VlY7oYo2M>ZSYzfZiUgccc3
-!s100 zP@4_;z?g1>nabgPG<H`11
+L21 72
+VSzgIUUUad=mA9;Am3feg^1
+!s100 SC>CMJ0iLelMlg1ZBDo;i2
 R9
 32
 R10
 !i10b 1
 R11
-R30
-R31
+R27
+R28
 !i113 1
 R14
 R15

@@ -4,7 +4,7 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:09:22 on Dec 07,2022
+# Start time: 11:52:04 on Dec 07,2022
 # vcom -reportprogress 300 -work work divisor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,10 +14,38 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity divisor
 # -- Compiling architecture divisor of divisor
-# End time: 02:09:22 on Dec 07,2022, Elapsed time: 0:00:00
+# ** Error: divisor.vhd(53): Signal "dividendo" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type std.STANDARD.BOOLEAN.
+# ** Error: divisor.vhd(53): near "=>": (vcom-1576) expecting GENERATE or THEN or USE.
+# ** Error: divisor.vhd(56): near "else": (vcom-1576) expecting END or WHEN.
+# ** Error: divisor.vhd(62): near "when": (vcom-1576) expecting END.
+# ** Error: divisor.vhd(66): near "if": (vcom-1576) expecting ';'.
+# End time: 11:52:04 on Dec 07,2022, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: D:/IntelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# D:/IntelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work divisor.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:52:55 on Dec 07,2022
+# vcom -reportprogress 300 -work work divisor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture divisor of divisor
+# End time: 11:52:55 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:09:22 on Dec 07,2022
+# Start time: 11:52:55 on Dec 07,2022
 # vcom -reportprogress 300 -work work traba_2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -28,10 +56,10 @@
 # -- Compiling entity traba_2
 # -- Compiling architecture traba_2 of traba_2
 # -- Loading entity divisor
-# End time: 02:09:22 on Dec 07,2022, Elapsed time: 0:00:00
+# End time: 11:52:55 on Dec 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:09:22 on Dec 07,2022
+# Start time: 11:52:55 on Dec 07,2022
 # vcom -reportprogress 300 -work work testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -47,21 +75,10 @@
 # ** Warning: testbench.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: testbench.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: testbench.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(64): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(74): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(79): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(84): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(89): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(94): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(104): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: testbench.vhd(109): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 02:09:22 on Dec 07,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 16
+# End time: 11:52:55 on Dec 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
 # vsim -voptargs="+acc" -t 1ns "+notimingchecks" work.testbench 
-# Start time: 02:09:22 on Dec 07,2022
+# Start time: 11:52:55 on Dec 07,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -71,12 +88,6 @@
 # Loading work.testbench(testbench)
 # Loading work.traba_2(traba_2)
 # Loading work.divisor(divisor)
-add wave -position end  sim:/testbench/clock_tb
-add wave -position end  sim:/testbench/reset_tb
-add wave -position end  sim:/testbench/data_tb
-add wave -position end  sim:/testbench/en_tb
-add wave -position end  sim:/testbench/prime_tb
-add wave -position end  sim:/testbench/valid_tb
 add wave -position end  sim:/testbench/traba_2/divisor/clock
 add wave -position end  sim:/testbench/traba_2/divisor/reset
 add wave -position end  sim:/testbench/traba_2/divisor/dividend_i
@@ -89,7 +100,19 @@ add wave -position end  sim:/testbench/traba_2/divisor/FSM
 add wave -position end  sim:/testbench/traba_2/divisor/divisor
 add wave -position end  sim:/testbench/traba_2/divisor/dividendo
 add wave -position end  sim:/testbench/traba_2/divisor/quociente
-add wave -position end  sim:/testbench/traba_2/divisor/acki
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/traba_2/FSM
+restart
+run
 run
 run
 run
@@ -97,15 +120,9 @@ run
 restart
 run
 run
-# WARNING: No extended dataflow license exists
-restart
 run
 run
 run
 run
-run
-run
-run
-run
-# End time: 02:25:23 on Dec 07,2022, Elapsed time: 0:16:01
+# End time: 12:00:26 on Dec 07,2022, Elapsed time: 0:07:31
 # Errors: 0, Warnings: 0

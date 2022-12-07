@@ -36,7 +36,6 @@ begin
         if reset = '1' then
             valid_o <= '0';
             prime_o <= '0';
-            FSM <= aguard;
         elsif rising_edge(clock) then
         
             case FSM is
@@ -44,19 +43,16 @@ begin
                     if en_i ='0' then
                         FSM <= aguard;
                     else 
-                        cnt <= "00000000000010";
+                        cnt <= "00000000000011";
                         num <= data_i;
-                        req_i <= '1';
                         valid_o <= '0';
                         prime_o <= '0';
                         FSM <= calc;
                     end if;
                 when calc =>
                     if cnt < num  then
-                        IF ack_o = '0' then
                             req_i <= '1';
                             FSM <= result;
-                        end if;
                     else
                         valid_o <= '1';
                         prime_o <= '1';    

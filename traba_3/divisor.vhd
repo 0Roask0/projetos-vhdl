@@ -50,22 +50,21 @@ begin
                         FSM <= espera;
                     end if;
                 when teste =>
-                    if dividendo <= divisor then
+                    if divisor <= dividendo then
                         dividendo <= dividendo - divisor;
                         quociente <= quociente + '1';
                     else 
                         remainder_o <= dividendo;
                         quocient_o <= quociente;
-                        acki<= '1';
+                        ack_o<= '1';
                         FSM <= fim;
                     end if;
                 when fim =>
                     if req_i = '0' then
-                        acki <= '0';
+                        ack_o <= '0';
                         FSM <= espera;
                     end if;
                 end case;
-                ack_o <= acki;
         end if;
     end process;
 end architecture;
